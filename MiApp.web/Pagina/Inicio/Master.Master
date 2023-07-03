@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="MiApp.web.Pagina.Inicio.Master" %>
+
+<%@ Register Assembly="DevExpress.Web.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+    <form id="form1" runat="server">
+        <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="titulo" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
+                    </dx:ASPxHyperLink> 
+                    <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="menu">
+                        <Items>
+                            <dx:MenuItem Text="users"></dx:MenuItem>
+                            <dx:MenuItem Text="perfil"></dx:MenuItem>
+                            <dx:MenuItem Text="Sistema"></dx:MenuItem>
+                        </Items>
+                    </dx:ASPxMenu>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxPanelIzquierdo" runat="server" FixedPosition="WindowLeft" Collapsible="true">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="900" />
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <dx:ASPxNavBar ID="ASPxNavBar1" runat="server">
+                        <Groups>                            
+                            <dx:NavBarGroup Text="Principal">
+                                <Items>
+                                    <dx:NavBarItem text ="Formulario1"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Formulario2"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Formulario3"></dx:NavBarItem>
+                                </Items>                                
+                            </dx:NavBarGroup>
+                            <dx:NavBarGroup Text="Secundario">
+                                <Items>
+                                    <dx:NavBarItem text ="Formulario1"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Formulario2"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Formulario3"></dx:NavBarItem>
+                                </Items>
+                            </dx:NavBarGroup>
+                        </Groups>
+                    </dx:ASPxNavBar>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxContenido" runat="server" FixedPosition="None">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <dx:ASPxPanel ID="ASPxInferior" runat="server" FixedPosition="WindowBottom">
+            <PanelCollection>
+                <dx:PanelContent runat="server">
+                    <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Pie de pagina"></dx:ASPxLabel>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+    </form>
+</body>
+</html>
