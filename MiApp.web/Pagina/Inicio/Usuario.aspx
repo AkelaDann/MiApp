@@ -2,28 +2,74 @@
 
 <%@ Register Assembly="DevExpress.Web.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="../../Scripts/Pagina/Inicio/Usuario.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxCallbackPanel ID="AcpUsuario" runat="server" Width="100%">
         <PanelCollection>
             <dx:PanelContent runat="server">
-                <dx:ASPxPanel ID="AplTitulo" runat="server" Width="100%" >
+                <dx:ASPxPanel ID="AplTitulo" ClientInstanceName="AplTitulo" runat="server" Width="100%" >
                     <PanelCollection>
                         <dx:PanelContent>
                             <dx:ASPxLabel ID="AlbTitulo" runat="server" Text="Usuarios" Font-Bold="true"></dx:ASPxLabel>
-                            <dx:ASPxGridView ID="AgvUsuarios" DataSourceID="OdsUsuario" runat="server" 
-                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%">
-                                <Settings ShowHeaderFilterButton="True"></Settings>
+
+                            <dx:ASPxGridView ID="AgvUsuario" ClientInstanceName="AgvUsuario" DataSourceID="OdsUsuario" runat="server" 
+                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%">                                
+                                <ClientSideEvents EndCallback="function(s,e){ EndcallbackAgvUsuario(s);}" ></ClientSideEvents >
+                                <Settings ShowFilterRowMenu="true" ShowHeaderFilterButton="True" VerticalScrollBarMode="Auto"></Settings>
 
                                 <SettingsBehavior AllowFocusedRow="True"></SettingsBehavior>
 
+                                <EditFormLayoutProperties ColCount="4" ColumnCount="4">
+                                    <Items>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Codigo" ColSpan="1"></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Nombre" ColSpan="1"></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Perfil.CodigoPerfil" ColSpan="1"></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColSpan="2" ColumnSpan="2" HorizontalAlign="Right" VerticalAlign="Bottom" ShowCaption="False"> 
+                                            <Template>
+                                                <dx:ASPxButton ID="AbnUsuarioGuardar" runat="server" Text="Guardar" AutoPostBack="false" UseSubmitBehavior="false" RenderMode="Secondary" Width="50%">
+                                                    <ClientSideEvents Click="function(s,e){ ConfirmarUsuarioGuardar(AgvUsuario);}" />
+                                                </dx:ASPxButton>
+                                                <dx:ASPxButton ID="AbnUsuarioCancelar" runat="server" Text="Cancelar" AutoPostBack="false" UseSubmitBehavior="false" RenderMode="Danger" Width="50%">
+                                                    <ClientSideEvents Click="function(s,e){ ConfirmarUsuarioCancelar(AgvUsuario);}" />
+                                                </dx:ASPxButton>
+                                            </Template>
+                                            <SpanRules>
+                                                <dx:SpanRule BreakpointName="s" ColumnSpan="2" RowSpan="1" />
+                                                <dx:SpanRule BreakpointName="m" ColumnSpan="1" RowSpan="1" />
+                                                <dx:SpanRule BreakpointName="l" ColumnSpan="2" RowSpan="1" />
+                                            </SpanRules>
+                                        </dx:GridViewColumnLayoutItem>
+                                    </Items>
+                                    <SettingsAdaptivity>
+                                        <GridSettings>
+                                            <Breakpoints>
+                                                <dx:LayoutBreakpoint Name="s" MaxWidth="768" ColumnCount="2" />
+                                                <dx:LayoutBreakpoint Name="m" MaxWidth="992" ColumnCount="3" />
+                                                <dx:LayoutBreakpoint Name="l" MaxWidth="1200" ColumnCount="4" />
+                                            </Breakpoints>
+                                        </GridSettings>
+                                    </SettingsAdaptivity>
+                                </EditFormLayoutProperties>
                                 <Columns>
-                                    <dx:GridViewDataSpinEditColumn FieldName="Codigo" VisibleIndex="0">
-                                        <PropertiesSpinEdit DisplayFormatString="g"></PropertiesSpinEdit>
+                                    <dx:GridViewDataSpinEditColumn FieldName="Codigo" VisibleIndex="0" ReadOnly="true">
+                                        <PropertiesSpinEdit DisplayFormatString="g" >
+                                            <SpinButtons ClientVisible ="false"></SpinButtons>
+                                        </PropertiesSpinEdit>
                                     </dx:GridViewDataSpinEditColumn>
-                                    <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="1"></dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="1">
+                                        <PropertiesTextEdit MaxLength="150">
+                                            <ValidationSettings>
+                                                <RequiredField IsRequired="true" ErrorText="Nombre requerido" />
+                                            </ValidationSettings>
+                                        </PropertiesTextEdit>
+                                    </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataComboBoxColumn FieldName="Perfil.CodigoPerfil" VisibleIndex="2">
-                                        <PropertiesComboBox ValueType="System.Int32" DataSourceID="OdsPerfiles" TextField="Glosa" ValueField="CodigoPerfil"></PropertiesComboBox>
+                                        <PropertiesComboBox ValueType="System.Int32" DataSourceID="OdsPerfiles" TextField="Glosa" ValueField="CodigoPerfil">
+                                            <ValidationSettings>
+                                                <RequiredField IsRequired="true" ErrorText="Debe indicar un perfil" /> 
+                                            </ValidationSettings>
+                                        </PropertiesComboBox>
                                     </dx:GridViewDataComboBoxColumn>
                                 </Columns>
                                 <Toolbars>

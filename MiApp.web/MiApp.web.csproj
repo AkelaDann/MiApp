@@ -104,6 +104,7 @@
     <Content Include="Content\Toastr\toastr.less" />
     <None Include="Scripts\Toastr\jquery-1.6.3-vsdoc.js" />
     <Content Include="Scripts\Pagina\Inicio\Master.js" />
+    <Content Include="Scripts\Pagina\Inicio\Usuario.js" />
     <Content Include="Scripts\Toastr\jquery-1.6.3.js" />
     <Content Include="Scripts\Toastr\jquery-1.6.3.min.js" />
     <Content Include="Scripts\Toastr\toastr.js" />

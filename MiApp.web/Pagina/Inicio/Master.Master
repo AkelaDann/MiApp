@@ -19,12 +19,12 @@
 </head>
 <body>    
     <form id="form1" runat="server">
-        <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop">
+        <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop" CssClass="border-0">
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
+                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
                     </dx:ASPxHyperLink> 
-                    <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="menu">
+                    <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="float-end">
                         <Items>
                             <dx:MenuItem Text="users"></dx:MenuItem>
                             <dx:MenuItem Text="perfil"></dx:MenuItem>
@@ -34,7 +34,7 @@
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxPanelIzquierdo" runat="server" FixedPosition="WindowLeft" Collapsible="true">
+        <dx:ASPxPanel ID="ASPxPanelIzquierdo" runat="server" FixedPosition="WindowLeft" Collapsible="true" CssClass="border-0">
             <SettingsAdaptivity CollapseAtWindowInnerWidth="900" />
             <PanelCollection>
                 <dx:PanelContent runat="server">
@@ -59,7 +59,7 @@
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxContenido" runat="server" FixedPosition="None">
+        <dx:ASPxPanel ID="ASPxContenido" runat="server" FixedPosition="None" CssClass="border-0 container-fluid fondo">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -67,7 +67,7 @@
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxInferior" runat="server" FixedPosition="WindowBottom">
+        <dx:ASPxPanel ID="ASPxInferior" runat="server" FixedPosition="WindowBottom" CssClass="border-0 text-center">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Pie de pagina"></dx:ASPxLabel>

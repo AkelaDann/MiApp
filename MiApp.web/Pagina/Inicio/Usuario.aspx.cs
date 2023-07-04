@@ -1,10 +1,6 @@
 ﻿using MiApp.Fll;
 using MiApp.Mod;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace MiApp.web.Pagina.Inicio
@@ -30,7 +26,7 @@ namespace MiApp.web.Pagina.Inicio
             catch (Exception ex)
             {
                 SalidaMod salida = LogFll.RegistrarExcepcion(ex);
-                VistaFll.AgregarSalida(AgvUsuarios, salida);
+                VistaFll.AgregarSalida(AgvUsuario, salida);
             }
             
         }
@@ -51,7 +47,7 @@ namespace MiApp.web.Pagina.Inicio
 
             if(salida.Codigo <= 0)
             {
-                VistaFll.AgregarSalida(AgvUsuarios, salida);
+                VistaFll.AgregarSalida(AgvUsuario, salida);
             }
         }
 
@@ -68,7 +64,7 @@ namespace MiApp.web.Pagina.Inicio
                 throw;
             }
 
-            VistaFll.AgregarSalida(AgvUsuarios, salida);
+            VistaFll.AgregarSalida(AgvUsuario, salida);
         }
     }
 }

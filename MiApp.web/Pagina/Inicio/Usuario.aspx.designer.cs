@@ -42,13 +42,13 @@ namespace MiApp.web.Pagina.Inicio
         protected global::DevExpress.Web.ASPxLabel AlbTitulo;
 
         /// <summary>
-        /// Control AgvUsuarios.
+        /// Control AgvUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView AgvUsuarios;
+        protected global::DevExpress.Web.ASPxGridView AgvUsuario;
 
         /// <summary>
         /// Control OdsUsuario.

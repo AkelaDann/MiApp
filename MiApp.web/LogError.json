@@ -1,0 +1,72 @@
+{
+  "Codigo": 638240923297542650,
+  "Fecha": "2023-07-04T18:32:09.754265-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240923303100042,
+  "Fecha": "2023-07-04T18:32:10.3100042-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 28"
+}
+{
+  "Codigo": 638240923343227607,
+  "Fecha": "2023-07-04T18:32:14.3227607-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240923480114205,
+  "Fecha": "2023-07-04T18:32:28.0114205-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240923525523480,
+  "Fecha": "2023-07-04T18:32:32.552348-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240923573372050,
+  "Fecha": "2023-07-04T18:32:37.337205-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240923574289272,
+  "Fecha": "2023-07-04T18:32:37.4289272-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.InsertarActualizar(UsuarioMod usuario, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 58"
+}
+{
+  "Codigo": 638240923574585309,
+  "Fecha": "2023-07-04T18:32:37.4585309-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.InsertarActualizar(UsuarioMod usuario, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 65\r\n   en MiApp.Bll.UsuarioBll.InsertarActualizarUsuario(Int32 Codigo, String Nombre, Int32 CodigoPerfil, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Bll\\UsuarioBll.cs:línea 30"
+}
