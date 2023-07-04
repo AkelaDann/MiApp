@@ -51,12 +51,21 @@ namespace MiApp.web.Pagina.Inicio
         protected global::DevExpress.Web.ASPxGridView AgvUsuarios;
 
         /// <summary>
-        /// Control ObjectDataSource1.
+        /// Control OdsUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        protected global::System.Web.UI.WebControls.ObjectDataSource OdsUsuario;
+
+        /// <summary>
+        /// Control OdsPerfiles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource OdsPerfiles;
     }
 }

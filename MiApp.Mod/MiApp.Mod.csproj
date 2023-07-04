@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PerfilMod.cs" />
+    <Compile Include="SalidaMod.cs" />
     <Compile Include="UsuarioMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

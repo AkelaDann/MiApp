@@ -12,7 +12,7 @@ namespace MiApp.Dal
 {
     public class UsuarioDal
     {
-        public static List<UsuarioMod> ListarUsuarios() 
+        public static List<UsuarioMod> ListarUsuarios(out SalidaMod salida) 
         {
             List<UsuarioMod> usuarios = new List<UsuarioMod>();
 
@@ -21,59 +21,78 @@ namespace MiApp.Dal
 
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros();
                     usuarios = db.Query<UsuarioMod, PerfilMod, UsuarioMod>(
                         sql: @"SP_Usuario_Select",
+                        param: parametros,
                         map: (UsuarioMod, PerfilMod) => { UsuarioMod.Perfil = PerfilMod; return UsuarioMod; },
                         splitOn:"CodigoPerfil",
                         commandType: CommandType.StoredProcedure).AsList();
+                    salida = ConexionFll.ObtenerSalida(parametros);
                 }
 
                 return usuarios;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                string error = ex.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 return usuarios;
             }
         }
 
-        public static void InsertarActualizar(int codigo, string nombre)
+        public static void InsertarActualizar(UsuarioMod usuario, out SalidaMod salida)
         {
             try
             {
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros(new
+                    {
+                        codigo = usuario.Codigo,
+                        nombre = usuario.Nombre,
+                        codigoPerfil = usuario.Perfil.CodigoPerfil
+                    });
                     db.Execute(
                         sql: "SP_Usuario_Insert_Update",
-                        param: new { codigo, nombre },
+                        param: parametros,                        
                         commandType: CommandType.StoredProcedure
                         );
+                    salida = ConexionFll.ObtenerSalida(parametros);
                 }
             }
-            catch (Exception EX)
+            catch (Exception e)
             {
-                string error = EX.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 throw;
             }
         }
 
-        public static void EliminarUsuario(int codigo)
+        public static void EliminarUsuario(int codigo, out SalidaMod salida)
         {
             //SP_Usuario_Delete
             try
             {
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros(new 
+                    {
+                        Codigo = codigo
+                    });
                     db.Execute(
                         sql: "SP_Usuario_Delete",
-                        param: new { codigo },
+                        param: parametros ,
                         commandType: CommandType.StoredProcedure
                         );
+                    salida = ConexionFll.ObtenerSalida(parametros);
                 }
+
             }
-            catch (Exception EX)
+            catch (Exception e)
             {
-                string error = EX.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 throw;
             }   
         }

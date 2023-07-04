@@ -9,7 +9,7 @@ namespace MiApp.Dal
 {
     public class PerfilDal
     {
-        public static List<PerfilMod> ListarPerfil()
+        public static List<PerfilMod> ListarPerfil(out SalidaMod salida)
         {
             List<PerfilMod> perfiles = new List<PerfilMod>();
 
@@ -18,17 +18,21 @@ namespace MiApp.Dal
 
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros();
                     perfiles = db.Query<PerfilMod>(
                         sql: @"[dbo].[SP_Perfil_Select]",
+                        param: parametros,
                         commandType: CommandType.StoredProcedure
                         ).AsList();
+                    salida = ConexionFll.ObtenerSalida(parametros);
                 }
 
                 return perfiles;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                string error = ex.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 return perfiles;
             }
         }

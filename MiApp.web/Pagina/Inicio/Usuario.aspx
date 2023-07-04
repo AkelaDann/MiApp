@@ -11,7 +11,7 @@
                     <PanelCollection>
                         <dx:PanelContent>
                             <dx:ASPxLabel ID="AlbTitulo" runat="server" Text="Usuarios" Font-Bold="true"></dx:ASPxLabel>
-                            <dx:ASPxGridView ID="AgvUsuarios" DataSourceID="ObjectDataSource1" runat="server" 
+                            <dx:ASPxGridView ID="AgvUsuarios" DataSourceID="OdsUsuario" runat="server" 
                                 AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%">
                                 <Settings ShowHeaderFilterButton="True"></Settings>
 
@@ -22,7 +22,9 @@
                                         <PropertiesSpinEdit DisplayFormatString="g"></PropertiesSpinEdit>
                                     </dx:GridViewDataSpinEditColumn>
                                     <dx:GridViewDataTextColumn FieldName="Nombre" VisibleIndex="1"></dx:GridViewDataTextColumn>
-                                    
+                                    <dx:GridViewDataComboBoxColumn FieldName="Perfil.CodigoPerfil" VisibleIndex="2">
+                                        <PropertiesComboBox ValueType="System.Int32" DataSourceID="OdsPerfiles" TextField="Glosa" ValueField="CodigoPerfil"></PropertiesComboBox>
+                                    </dx:GridViewDataComboBoxColumn>
                                 </Columns>
                                 <Toolbars>
                                     <dx:GridViewToolbar>
@@ -43,22 +45,37 @@
     </dx:ASPxCallbackPanel>
     
 
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ListarUsuarios" TypeName="MiApp.Bll.UsuarioBll" 
-        DeleteMethod="EliminarUsuario" InsertMethod="InsertarActualizarUsuario" UpdateMethod="InsertarActualizarUsuario">
+    <asp:ObjectDataSource ID="OdsUsuario" runat="server" SelectMethod="ListarUsuarios" TypeName="MiApp.Bll.UsuarioBll" 
+        DeleteMethod="EliminarUsuario" InsertMethod="InsertarActualizarUsuario" UpdateMethod="InsertarActualizarUsuario"
+        OnInserting="OdsUsuario_IUing" OnUpdating="OdsUsuario_IUing"
+        OnSelected="OdsUsuario_Selected" OnUpdated="OdsUsuario_IUDed" OnInserted="OdsUsuario_IUDed" OnDeleted="OdsUsuario_IUDed">
         <DeleteParameters>
             <asp:Parameter Name="Codigo" Type="Int32"></asp:Parameter>
+            <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+            <asp:Parameter Name="Perfil.CodigoPerfil" Type="Int32"></asp:Parameter>
+            <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
         </InsertParameters>
+        <SelectParameters>
+            <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
+        </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
+            <asp:Parameter Name="Perfil.CodigoPerfil" Type="Int32"></asp:Parameter>
+            <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
         </UpdateParameters>
     </asp:ObjectDataSource>
 
 
   
+    <asp:ObjectDataSource ID="OdsPerfiles" runat="server" SelectMethod="ListarPerfiles" TypeName="MiApp.Bll.PerfilBll">
+        <SelectParameters>
+            <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
+        </SelectParameters>
+    </asp:ObjectDataSource>
 
 </asp:Content>

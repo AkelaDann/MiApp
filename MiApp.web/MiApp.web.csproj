@@ -73,8 +73,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bootstrap\bootstrap-grid.css" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.rtl.css" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.css" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.css" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap.css" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap.rtl.css" />
+    <Content Include="Content\Bootstrap\bootstrap.rtl.min.css" />
+    <Content Include="Content\Pagina\Inicio\Master.css" />
+    <Content Include="Content\Toastr\toastr.css" />
+    <Content Include="Content\Toastr\toastr.min.css" />
     <Content Include="Pagina\Inicio\Esteticos\LogoDim.png" />
     <Content Include="Pagina\Inicio\Usuario.aspx" />
+    <Content Include="Scripts\Bootstrap\bootstrap.bundle.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.esm.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.esm.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
+    <Content Include="Content\Toastr\toastr.scss" />
+    <Content Include="Content\Toastr\toastr.less" />
+    <None Include="Scripts\Toastr\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\Pagina\Inicio\Master.js" />
+    <Content Include="Scripts\Toastr\jquery-1.6.3.js" />
+    <Content Include="Scripts\Toastr\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\Toastr\toastr.js" />
+    <Content Include="Scripts\Toastr\toastr.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,8 +128,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Bootstrap\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.rtl.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-utilities.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="Content\Bootstrap\bootstrap-grid.css.map" />
     <None Include="packages.config" />
     <Content Include="Pagina\Inicio\Master.Master" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js.map" />
+    <Content Include="Scripts\Bootstrap\bootstrap.js.map" />
+    <Content Include="Scripts\Bootstrap\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\Bootstrap\bootstrap.esm.js.map" />
+    <Content Include="Scripts\Bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\Bootstrap\bootstrap.bundle.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

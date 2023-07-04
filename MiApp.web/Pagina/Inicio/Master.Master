@@ -8,6 +8,12 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="../../Content/Pagina/Inicio/Master.css" rel="stylesheet" />
+    <link href="../../Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/Bootstrap/bootstrap.min.js"></script>
+    <script src="../../Scripts/Toastr/jquery-1.6.3.min.js"></script>
+    <script src="../../Scripts/Toastr/toastr.min.js"></script>
+    <link href="../../Content/Toastr/toastr.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,7 +22,7 @@
         <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop">
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="titulo" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
+                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
                     </dx:ASPxHyperLink> 
                     <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="menu">
                         <Items>
@@ -69,5 +75,6 @@
             </PanelCollection>
         </dx:ASPxPanel>
     </form>
+    <script src="../../Scripts/Pagina/Inicio/Master.js"></script>
 </body>
 </html>

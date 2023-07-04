@@ -1,4 +1,5 @@
 ﻿using MiApp.Dal;
+using MiApp.Fll;
 using MiApp.Mod;
 using System;
 using System.Collections.Generic;
@@ -8,59 +9,47 @@ using System.Threading.Tasks;
 
 namespace MiApp.Bll
 {
-    public class PerfilBll
-    {
-        public static List<PerfilMod> ListarPerfiles()
-        {
-            try
-            {
-                return PerfilDal.ListarPerfil();
-            }
-            catch (Exception ex)
-            {
-                string error = ex.Message;
-                throw;
-            }
-        }
-    }
     public class UsuarioBll
     {
-        public static List<UsuarioMod> ListarUsuarios()
+        public static List<UsuarioMod> ListarUsuarios(out SalidaMod salida)
         {
             try
             {
-                return UsuarioDal.ListarUsuarios();
+                return UsuarioDal.ListarUsuarios(out salida);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                salida = LogFll.RegistrarExcepcion(e);
                 return new List<UsuarioMod>();
             }
             
         }
 
-        public static void InsertarActualizarUsuario(int Codigo, string Nombre)
+        public static void InsertarActualizarUsuario(int Codigo, string Nombre, int CodigoPerfil, out SalidaMod salida)
         {
             try
             {
-                UsuarioDal.InsertarActualizar(Codigo, Nombre);
+                UsuarioMod usuario = new UsuarioMod(Codigo, Nombre, new PerfilMod(CodigoPerfil));
+                UsuarioDal.InsertarActualizar(usuario, out salida);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                string error = ex.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 throw;
             }
         }
 
-        public static void EliminarUsuario(int Codigo)
+        public static void EliminarUsuario(int Codigo, out SalidaMod salida)
         {
             try
             {
-                UsuarioDal.EliminarUsuario(Codigo);
+                UsuarioDal.EliminarUsuario(Codigo, out salida);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                string error = ex.Message;
+                salida = LogFll.RegistrarExcepcion(e);
+                string error = e.Message;
                 throw;
             }
         }
