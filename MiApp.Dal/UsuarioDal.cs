@@ -9,7 +9,7 @@ namespace MiApp.Dal
 {
     public class UsuarioDal
     {
-        public static List<UsuarioMod> ListarUsuarios(out SalidaMod salida) 
+        public static List<UsuarioMod> Listar(out SalidaMod salida) 
         {
             List<UsuarioMod> usuarios = new List<UsuarioMod>();
 
@@ -66,7 +66,7 @@ namespace MiApp.Dal
             }
         }
 
-        public static void EliminarUsuario(int codigo, out SalidaMod salida)
+        public static void Eliminar(int codigo, out SalidaMod salida)
         {
             //SP_Usuario_Delete
             try

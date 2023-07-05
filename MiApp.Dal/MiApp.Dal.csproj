@@ -44,7 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentoDal.cs" />
+    <Compile Include="EtapaDal.cs" />
     <Compile Include="PerfilDal.cs" />
+    <Compile Include="PersonaDal.cs" />
+    <Compile Include="TipoDocumentoDal.cs" />
     <Compile Include="UsuarioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

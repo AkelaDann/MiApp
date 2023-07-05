@@ -12,7 +12,7 @@ namespace MiApp.Bll
         {
             try
             {
-                return UsuarioDal.ListarUsuarios(out salida);
+                return UsuarioDal.Listar(out salida);
             }
             catch (Exception e)
             {
@@ -41,7 +41,7 @@ namespace MiApp.Bll
         {
             try
             {
-                UsuarioDal.EliminarUsuario(Codigo, out salida);
+                UsuarioDal.Eliminar(Codigo, out salida);
             }
             catch (Exception e)
             {

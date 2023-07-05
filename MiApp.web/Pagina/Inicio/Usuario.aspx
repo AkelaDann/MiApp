@@ -14,7 +14,7 @@
                             <dx:ASPxLabel ID="AlbTitulo" runat="server" Text="Usuarios" Font-Bold="true"></dx:ASPxLabel>
 
                             <dx:ASPxGridView ID="AgvUsuario" ClientInstanceName="AgvUsuario" DataSourceID="OdsUsuario" runat="server" 
-                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%">                                
+                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%" OnStartRowEditing="AgvUsuario_StartRowEditing">                                
                                 <ClientSideEvents EndCallback="function(s,e){ EndcallbackAgvUsuario(s);}" ></ClientSideEvents >
                                 <Settings ShowFilterRowMenu="true" ShowHeaderFilterButton="True" VerticalScrollBarMode="Auto"></Settings>
 
@@ -22,9 +22,9 @@
 
                                 <EditFormLayoutProperties ColCount="4" ColumnCount="4">
                                     <Items>
-                                        <dx:GridViewColumnLayoutItem ColumnName="Codigo" ColSpan="1"></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Codigo" ColSpan="1" Visible="false" Name="Codigo" ></dx:GridViewColumnLayoutItem>
                                         <dx:GridViewColumnLayoutItem ColumnName="Nombre" ColSpan="1"></dx:GridViewColumnLayoutItem>
-                                        <dx:GridViewColumnLayoutItem ColumnName="Perfil.CodigoPerfil" ColSpan="1"></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Perfil.CodigoPerfil" ColSpan="1" ></dx:GridViewColumnLayoutItem>
                                         <dx:GridViewColumnLayoutItem ColSpan="2" ColumnSpan="2" HorizontalAlign="Right" VerticalAlign="Bottom" ShowCaption="False"> 
                                             <Template>
                                                 <dx:ASPxButton ID="AbnUsuarioGuardar" runat="server" Text="Guardar" AutoPostBack="false" UseSubmitBehavior="false" RenderMode="Secondary" Width="50%">
@@ -52,7 +52,7 @@
                                     </SettingsAdaptivity>
                                 </EditFormLayoutProperties>
                                 <Columns>
-                                    <dx:GridViewDataSpinEditColumn FieldName="Codigo" VisibleIndex="0" ReadOnly="true">
+                                    <dx:GridViewDataSpinEditColumn FieldName="Codigo" VisibleIndex="0" ReadOnly="true" Width="10%" >
                                         <PropertiesSpinEdit DisplayFormatString="g" >
                                             <SpinButtons ClientVisible ="false"></SpinButtons>
                                         </PropertiesSpinEdit>

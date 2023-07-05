@@ -92,6 +92,7 @@
     <Content Include="Content\Pagina\Inicio\Master.css" />
     <Content Include="Content\Toastr\toastr.css" />
     <Content Include="Content\Toastr\toastr.min.css" />
+    <Content Include="Pagina\Demo\Documento.aspx" />
     <Content Include="Pagina\Inicio\Esteticos\LogoDim.png" />
     <Content Include="Pagina\Inicio\Usuario.aspx" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.js" />
@@ -103,6 +104,7 @@
     <Content Include="Content\Toastr\toastr.scss" />
     <Content Include="Content\Toastr\toastr.less" />
     <None Include="Scripts\Toastr\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\Pagina\Demo\Documento.js" />
     <Content Include="Scripts\Pagina\Inicio\Master.js" />
     <Content Include="Scripts\Pagina\Inicio\Usuario.js" />
     <Content Include="Scripts\Toastr\jquery-1.6.3.js" />
@@ -112,6 +114,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pagina\Demo\Documento.aspx.cs">
+      <DependentUpon>Documento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina\Demo\Documento.aspx.designer.cs">
+      <DependentUpon>Documento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pagina\Inicio\Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

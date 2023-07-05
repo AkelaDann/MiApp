@@ -7,33 +7,38 @@ using System.Data;
 
 namespace MiApp.Dal
 {
-    public class PerfilDal
+    public class PersonaDal
     {
-        public static List<PerfilMod> Listar(out SalidaMod salida)
+        public static List<PersonaMod> Listar(int tipoDocumento,out SalidaMod salida)
         {
-            List<PerfilMod> perfiles = new List<PerfilMod>();
+            List<PersonaMod> personas = new List<PersonaMod>();
 
             try
             {
 
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
-                    DynamicParameters parametros = ConexionFll.ObtenerParametros();
-                    perfiles = db.Query<PerfilMod>(
-                        sql: @"[dbo].[SP_Perfil_Select]",
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros(
+                        new
+                        {
+                            tpd_codigo = tipoDocumento
+                        }
+                        ); ;
+                        personas = db.Query<PersonaMod>(
+                        sql: @"[dbo].[SP_Persona_Select]",
                         param: parametros,
                         commandType: CommandType.StoredProcedure
                         ).AsList();
                     salida = ConexionFll.ObtenerSalida(parametros);
                 }
 
-                return perfiles;
+                return personas;
             }
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
                 string error = e.Message;
-                return perfiles;
+                return personas;
             }
         }
     }

@@ -7,11 +7,11 @@ using System.Data;
 
 namespace MiApp.Dal
 {
-    public class PerfilDal
+    public class TipoDocumentoDal
     {
-        public static List<PerfilMod> Listar(out SalidaMod salida)
+        public static List<TipoDocumentoMod> Listar(out SalidaMod salida)
         {
-            List<PerfilMod> perfiles = new List<PerfilMod>();
+            List<TipoDocumentoMod> tipoDocumentos = new List<TipoDocumentoMod>();
 
             try
             {
@@ -19,21 +19,21 @@ namespace MiApp.Dal
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
                     DynamicParameters parametros = ConexionFll.ObtenerParametros();
-                    perfiles = db.Query<PerfilMod>(
-                        sql: @"[dbo].[SP_Perfil_Select]",
+                    tipoDocumentos = db.Query<TipoDocumentoMod>(
+                        sql: @"[dbo].[SP_Tipo_Documento_Select]",
                         param: parametros,
                         commandType: CommandType.StoredProcedure
                         ).AsList();
                     salida = ConexionFll.ObtenerSalida(parametros);
                 }
 
-                return perfiles;
+                return tipoDocumentos;
             }
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
                 string error = e.Message;
-                return perfiles;
+                return tipoDocumentos;
             }
         }
     }

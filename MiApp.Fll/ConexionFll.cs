@@ -23,7 +23,7 @@ namespace MiApp.Fll
 
         public static SalidaMod ObtenerSalida(DynamicParameters parametros)
         {
-            SalidaMod salida = new SalidaMod(parametros.Get<int>("codigo_salida"), parametros.Get<string>("Mensaje_salida"));
+            SalidaMod salida = new SalidaMod(parametros.Get<int>("Codigo_Salida"), parametros.Get<string>("Mensaje_Salida"));
             if (salida.Codigo <= -1)
             {
                 return LogFll.RegistroExcepcionBaseDatos(salida);

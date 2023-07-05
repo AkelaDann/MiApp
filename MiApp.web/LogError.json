@@ -70,3 +70,174 @@
   "Destino": "Clase : Dictionary`2, Method: get_Item",
   "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.InsertarActualizar(UsuarioMod usuario, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 65\r\n   en MiApp.Bll.UsuarioBll.InsertarActualizarUsuario(Int32 Codigo, String Nombre, Int32 CodigoPerfil, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Bll\\UsuarioBll.cs:línea 30"
 }
+{
+  "Codigo": 638240932449881359,
+  "Fecha": "2023-07-04T18:47:24.9881359-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240932455675044,
+  "Fecha": "2023-07-04T18:47:25.5675044-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 28"
+}
+{
+  "Codigo": 638240932494215484,
+  "Fecha": "2023-07-04T18:47:29.4215484-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240932987410127,
+  "Fecha": "2023-07-04T18:48:18.7410127-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240933143138131,
+  "Fecha": "2023-07-04T18:48:34.3138131-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240933144153853,
+  "Fecha": "2023-07-04T18:48:34.4153853-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.InsertarActualizar(UsuarioMod usuario, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 58"
+}
+{
+  "Codigo": 638240933144453760,
+  "Fecha": "2023-07-04T18:48:34.445376-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.InsertarActualizar(UsuarioMod usuario, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 65\r\n   en MiApp.Bll.UsuarioBll.InsertarActualizarUsuario(Int32 Codigo, String Nombre, Int32 CodigoPerfil, SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Bll\\UsuarioBll.cs:línea 30"
+}
+{
+  "Codigo": 638240934442437769,
+  "Fecha": "2023-07-04T18:50:44.2437769-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240934447944871,
+  "Fecha": "2023-07-04T18:50:44.7944871-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 28"
+}
+{
+  "Codigo": 638240934529115919,
+  "Fecha": "2023-07-04T18:50:52.9115919-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638240935741378060,
+  "Fecha": "2023-07-04T18:52:54.137806-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 28"
+}
+{
+  "Codigo": 638241447213332982,
+  "Fecha": "2023-07-05T09:05:21.3332982-04:00",
+  "CodigoExcepcion": -2146232969,
+  "Mensaje": "La clave proporcionada no se encontró en el diccionario.",
+  "Objeto": "mscorlib",
+  "Destino": "Clase : Dictionary`2, Method: get_Item",
+  "SeguimientoPila": "   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   en Dapper.DynamicParameters.Get[T](String name) en /_/Dapper/DynamicParameters.cs:línea 318\r\n   en MiApp.Fll.ConexionFll.ObtenerSalida(DynamicParameters parametros) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Fll\\ConexionFll.cs:línea 26\r\n   en MiApp.Dal.PerfilDal.ListarPerfil(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\PerfilDal.cs:línea 27"
+}
+{
+  "Codigo": 638241450359409452,
+  "Fecha": "2023-07-05T09:10:35.9409452-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [8114], \r\n\t\t\t\t\t\t\t\tMensaje: [Error al convertir el tipo de datos varchar a numeric.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [SP_Usuario_Insert_Update], \r\n\t\t\t\t\t\t\t\tLínea: [39], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [5].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}
+{
+  "Codigo": 638241456013758120,
+  "Fecha": "2023-07-05T09:20:01.375812-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [8114], \r\n\t\t\t\t\t\t\t\tMensaje: [Error al convertir el tipo de datos varchar a numeric.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [SP_Usuario_Insert_Update], \r\n\t\t\t\t\t\t\t\tLínea: [39], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [5].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}
+{
+  "Codigo": 638241463844434845,
+  "Fecha": "2023-07-05T09:33:04.4434845-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [245], \r\n\t\t\t\t\t\t\t\tMensaje: [Error de conversión al convertir el valor varchar 'Se elimina el usuario' al tipo de datos int.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [SP_Usuario_Delete], \r\n\t\t\t\t\t\t\t\tLínea: [17], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [1].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}
+{
+  "Codigo": 638241465053227709,
+  "Fecha": "2023-07-05T09:35:05.3227709-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [8114], \r\n\t\t\t\t\t\t\t\tMensaje: [Error al convertir el tipo de datos varchar a numeric.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [SP_Usuario_Insert_Update], \r\n\t\t\t\t\t\t\t\tLínea: [39], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [5].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}
+{
+  "Codigo": 638241466279514283,
+  "Fecha": "2023-07-05T09:37:07.9514283-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [8114], \r\n\t\t\t\t\t\t\t\tMensaje: [Error al convertir el tipo de datos varchar a numeric.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [SP_Usuario_Insert_Update], \r\n\t\t\t\t\t\t\t\tLínea: [39], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [5].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}
+{
+  "Codigo": 638241471965367819,
+  "Fecha": "2023-07-05T09:46:36.5367819-04:00",
+  "CodigoExcepcion": -2146232060,
+  "Mensaje": "No se encontró el procedimiento almacenado 'SP_Usuario_Selet'.",
+  "Objeto": ".Net SqlClient Data Provider",
+  "Destino": "Clase : SqlConnection, Method: OnError",
+  "SeguimientoPila": "   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   en System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)\r\n   en Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) en /_/Dapper/SqlMapper.cs:línea 1133\r\n   en Dapper.SqlMapper.<MultiMapImpl>d__161`8.MoveNext() en /_/Dapper/SqlMapper.cs:línea 1537\r\n   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)\r\n   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)\r\n   en Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) en /_/Dapper/SqlMapper.cs:línea 1518\r\n   en Dapper.SqlMapper.Query[TFirst,TSecond,TReturn](IDbConnection cnn, String sql, Func`3 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) en /_/Dapper/SqlMapper.cs:línea 1373\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 22"
+}
+{
+  "Codigo": 638241472026449628,
+  "Fecha": "2023-07-05T09:46:42.6449628-04:00",
+  "CodigoExcepcion": -2146232060,
+  "Mensaje": "No se encontró el procedimiento almacenado 'SP_Usuario_Selet'.",
+  "Objeto": ".Net SqlClient Data Provider",
+  "Destino": "Clase : SqlConnection, Method: OnError",
+  "SeguimientoPila": "   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   en System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)\r\n   en Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) en /_/Dapper/SqlMapper.cs:línea 1133\r\n   en Dapper.SqlMapper.<MultiMapImpl>d__161`8.MoveNext() en /_/Dapper/SqlMapper.cs:línea 1537\r\n   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)\r\n   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)\r\n   en Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) en /_/Dapper/SqlMapper.cs:línea 1518\r\n   en Dapper.SqlMapper.Query[TFirst,TSecond,TReturn](IDbConnection cnn, String sql, Func`3 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) en /_/Dapper/SqlMapper.cs:línea 1373\r\n   en MiApp.Dal.UsuarioDal.ListarUsuarios(SalidaMod& salida) en C:\\Users\\dgallardo\\source\\repos\\MiApp\\MiApp.Dal\\UsuarioDal.cs:línea 22"
+}

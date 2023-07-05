@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentoMod.cs" />
+    <Compile Include="EtapaMod.cs" />
+    <Compile Include="ItemMod.cs" />
     <Compile Include="PerfilMod.cs" />
+    <Compile Include="PersonaMod.cs" />
     <Compile Include="SalidaMod.cs" />
+    <Compile Include="TipoDocumentoMod.cs" />
     <Compile Include="UsuarioMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

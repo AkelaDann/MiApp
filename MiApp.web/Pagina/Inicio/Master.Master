@@ -38,7 +38,7 @@
             <SettingsAdaptivity CollapseAtWindowInnerWidth="900" />
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxNavBar ID="ASPxNavBar1" runat="server">
+                    <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" CssClass="fondo">
                         <Groups>                            
                             <dx:NavBarGroup Text="Principal">
                                 <Items>

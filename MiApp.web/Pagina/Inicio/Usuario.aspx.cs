@@ -42,7 +42,7 @@ namespace MiApp.web.Pagina.Inicio
             catch (Exception ex)
             {
                 salida = LogFll.RegistrarExcepcion(ex);
-                throw;
+                
             }
 
             if(salida.Codigo <= 0)
@@ -61,10 +61,26 @@ namespace MiApp.web.Pagina.Inicio
             catch (Exception ex)
             {
                 salida = LogFll.RegistrarExcepcion(ex);
-                throw;
+               
             }
 
             VistaFll.AgregarSalida(AgvUsuario, salida);
+        }
+
+        protected void AgvUsuario_StartRowEditing(object sender, DevExpress.Web.Data.ASPxStartRowEditingEventArgs e)
+        {
+            try
+            {
+                AgvUsuario.EditFormLayoutProperties.Items[3].ColumnSpan = 1;
+                AgvUsuario.EditFormLayoutProperties.FindItemOrGroupByName("Codigo").Visible = true;
+                AgvUsuario.DataBind();
+            }
+            catch (Exception ex)
+            {
+                SalidaMod salida = LogFll.RegistrarExcepcion(ex);
+                
+            }
+            
         }
     }
 }
