@@ -4,13 +4,13 @@
     {
         public int Correlativo { get; set; }
         public string Glosa { get; set; }
-        public float Valor { get; set; }
+        public double Valor { get; set; }
 
-        public ItemMod(int correlativo,string glosa, float valor)
+        public ItemMod(int itm_correlativo,string itm_glosa, double itm_valor)
         {
-            Correlativo = correlativo;
-            Glosa = glosa;
-            Valor = valor;
+            Correlativo = itm_correlativo;
+            Glosa = itm_glosa;
+            Valor = itm_valor;
         }
     }
 }

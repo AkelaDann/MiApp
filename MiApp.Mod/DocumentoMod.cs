@@ -12,9 +12,9 @@ namespace MiApp.Mod
         public DateTime FechaMaxima { get; set; }
         public int Referencia { get; set; }
         public int Descuento { get; set; }
-        public char Clasificacion { get; set; }
+        public string Clasificacion { get; set; }
         public bool Marcado { get; set; }
-        public float Total { get; set; }
+        public double Total { get; set; }
 
         public PersonaMod Persona { get; set; }
         public TipoDocumentoMod TipoDocumento { get; set; }
@@ -22,7 +22,7 @@ namespace MiApp.Mod
         public List<ItemMod> Items { get; set; }
 
         public DocumentoMod( int codigo,string glosa, DateTime fecha,DateTime fechaMinima,DateTime fechaMaxima, 
-            int referencia,int descuento,char clasificacion,bool marcado,float total)
+            int referencia,int descuento,string clasificacion,bool marcado,double total)
         {
             Codigo = codigo;
             Glosa = glosa;
@@ -36,7 +36,7 @@ namespace MiApp.Mod
             Total = total;
         }
         public DocumentoMod(int codigo, string glosa, DateTime fecha, DateTime fechaMinima, DateTime fechaMaxima,
-            int referencia, int descuento, char clasificacion, bool marcado, float total,
+            int referencia, int descuento, string clasificacion, bool marcado, double total,
             PersonaMod persona,TipoDocumentoMod tipoDocumento,List<EtapaMod> etapas,List<ItemMod> items):
             this(codigo,glosa,fecha,fechaMinima,fechaMaxima,referencia,descuento,clasificacion,marcado,total)
         {

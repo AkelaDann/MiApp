@@ -12,7 +12,7 @@ namespace MiApp.web.Pagina.Inicio
 
         }
 
-        protected void btn_guardar_Click(object sender, EventArgs e)
+        protected void Btn_guardar_Click(object sender, EventArgs e)
         {
             OdsUsuario.Insert();
         }
@@ -77,7 +77,7 @@ namespace MiApp.web.Pagina.Inicio
             }
             catch (Exception ex)
             {
-                SalidaMod salida = LogFll.RegistrarExcepcion(ex);
+               LogFll.RegistrarExcepcion(ex);
                 
             }
             

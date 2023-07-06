@@ -37,7 +37,6 @@ namespace MiApp.Dal
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                string error = e.Message;
                 return personas;
             }
         }

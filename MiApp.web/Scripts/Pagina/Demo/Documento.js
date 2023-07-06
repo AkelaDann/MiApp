@@ -5,5 +5,23 @@
 }
 
 function OnItemsClick() {
-    ApcItem.show();
+    ApcItem.Show();
+}
+
+function EndCallbackAcpDocumento(s) {
+    if (s.cpCodigo != null) {
+        EnviarMensaje(s.cpCodigo, s.cpMensaje);
+        delete s.cpCodigo;
+        delete s.cpMensaje;
+    }
+    if (s.cpLimpiar) {
+        ASPxClientEdit.ClearEditorsInContainerById('AflDocumento');
+        delete s.cpLimpiar;
+    }
+}
+
+function Guardar() {
+    if (ASPxClientEdit.ValidateEditorsInContainerById('AflDocumento')) {
+        AcpDocumento.PerformCallback();
+    }
 }

@@ -30,7 +30,7 @@ namespace MiApp.Fll
 
             foreach (EtapaMod etapa in documento.Etapas)
             {
-                tablaEtapa.Rows.Add(etapa.Codigo,etapa.Glosa);
+                tablaEtapa.Rows.Add(etapa.Codigo,documento.Codigo);
             }
 
             return tablaEtapa;

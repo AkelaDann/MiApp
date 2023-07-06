@@ -1,4 +1,4 @@
-﻿const { Toast } = require("../../Bootstrap/bootstrap.esm");
+﻿//const { Toastr }  = require("../../Bootstrap/bootstrap.esm");
 
 function Confirmar(mensaje) {
     return confirm(mensaje);
@@ -25,14 +25,14 @@ function EnviarMensaje(codigo,mensaje) {
     }
 }
 
-ASPxClientControl.GetControlCollection().ControlsInitialized.AddHandlers(function( s, e ){
+ASPxClientControl.GetControlCollection().ControlsInitialized.AddHandler(function (s, e) {
     if(window.UpdateGridHeight)
     {
-    UpdateGridHeight();
+        UpdateGridHeight();
     }
 });
 
-ASPxClientControl.GetControlCollection().BrowserWindowResized.AddHandlers(function (s, e) {
+ASPxClientControl.GetControlCollection().BrowserWindowResized.AddHandler(function (s, e) {
     if (window.UpdateGridHeight) {
         UpdateGridHeight();
     }

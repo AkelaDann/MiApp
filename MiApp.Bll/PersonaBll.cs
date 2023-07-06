@@ -6,19 +6,18 @@ using System.Collections.Generic;
 
 namespace MiApp.Bll
 {
-    public class PerfilBll
+    public class PersonaBll
     {
-        public static List<PerfilMod> ListarPerfiles(out SalidaMod salida)
+        public static List<PersonaMod> Listar(int tipoDocumento, out SalidaMod salida)
         {
             try
             {
-                return PerfilDal.Listar(out salida);
+                return PersonaDal.Listar(tipoDocumento,out salida);
             }
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-
-                return new List<PerfilMod>();
+                return new List<PersonaMod>();
             }
         }
     }

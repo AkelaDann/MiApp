@@ -114,13 +114,13 @@ namespace MiApp.web.Pagina.Demo
         protected global::DevExpress.Web.ASPxRadioButtonList ArlClasificacion;
 
         /// <summary>
-        /// Control AflDocumento_E12.
+        /// Control AcbMarcado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxCheckBox AflDocumento_E12;
+        protected global::DevExpress.Web.ASPxCheckBox AcbMarcado;
 
         /// <summary>
         /// Control AtxGlosa.
@@ -132,22 +132,40 @@ namespace MiApp.web.Pagina.Demo
         protected global::DevExpress.Web.ASPxTextBox AtxGlosa;
 
         /// <summary>
-        /// Control AflDocumento_E14.
+        /// Control AbnItem.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton AflDocumento_E14;
+        protected global::DevExpress.Web.ASPxButton AbnItem;
 
         /// <summary>
-        /// Control AflDocumento_E15.
+        /// Control AbnGuardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton AflDocumento_E15;
+        protected global::DevExpress.Web.ASPxButton AbnGuardar;
+
+        /// <summary>
+        /// Control ApcItem.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPopupControl ApcItem;
+
+        /// <summary>
+        /// Control AgvItems.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView AgvItems;
 
         /// <summary>
         /// Control OdsTipoDocumento.

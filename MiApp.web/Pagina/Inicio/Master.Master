@@ -42,8 +42,8 @@
                         <Groups>                            
                             <dx:NavBarGroup Text="Principal">
                                 <Items>
-                                    <dx:NavBarItem text ="Formulario1"></dx:NavBarItem>
-                                    <dx:NavBarItem text ="Formulario2"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Usuario" NavigateUrl="Usuario.aspx"></dx:NavBarItem>
+                                    <dx:NavBarItem text ="Documento" NavigateUrl="../Demo/Documento.aspx"></dx:NavBarItem>
                                     <dx:NavBarItem text ="Formulario3"></dx:NavBarItem>
                                 </Items>                                
                             </dx:NavBarGroup>

@@ -5,10 +5,11 @@
     <script src="../../Scripts/Pagina/Demo/Documento.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <dx:ASPxCallbackPanel ID="AcpDocumento" ClientInstanceName="AcpDocumento" runat="server" Width="100%">
+    <dx:ASPxCallbackPanel ID="AcpDocumento" ClientInstanceName="AcpDocumento" runat="server" Width="100%" OnCallback="AcpDocumento_Callback">
+        <ClientSideEvents EndCallback="function(s, e){ EndCallbackAcpDocumento(s);}" />
         <PanelCollection>
             <dx:PanelContent runat="server">
-                <dx:ASPxFormLayout ID="AflDocumento" runat="server" Width="100%">
+                <dx:ASPxFormLayout ID="AflDocumento" ClientInstanceName="AflDocumento" runat="server" Width="100%">
                     <Items>
                         <dx:LayoutGroup Caption="Ingreso Documento" ColumnCount="4" Width="100%">
                             <GridSettings StretchLastItem="True" ChangeCaptionLocationAtWidth="660">
@@ -24,6 +25,8 @@
                                         <dx:LayoutItemNestedControlContainer runat="server">
                                             <dx:ASPxComboBox runat="server" ID="AcbTipoDocumento" DataSourceID="OdsTipoDocumento" ValueField="Codigo" TextField="Glosa">
                                                 <ClientSideEvents SelectedIndexChanged="function(s, e) {OnTipoDocumentoChanged(s);}"></ClientSideEvents>
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione Tipo Documento" />
                                             </dx:ASPxComboBox>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
@@ -31,21 +34,31 @@
                                 <dx:LayoutItem Caption="Persona" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxComboBox runat="server" ID="AcbPersona" ClientInstanceName="AcbPersona" OnCallback="AcbPersona_Callback" ValueField="Rut" TextField="Nombre"></dx:ASPxComboBox>
+                                            <dx:ASPxComboBox runat="server" ID="AcbPersona" ClientInstanceName="AcbPersona" OnCallback="AcbPersona_Callback" ValueField="Rut" TextField="Nombre" OnInit="AcbPersona_Init">
+                                                <ClientSideEvents EndCallback="function(s, e){ EndCallbackAcpDocumento(s);}" />
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione Persona" />
+                                            </dx:ASPxComboBox>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
                                 <dx:LayoutItem Caption="Etapas" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxTokenBox runat="server" ID="AtbEtapa" ItemValueType="System.Int32" TextField="Glosa" ValueField="Codigo" DataSourceID="OdsEtapa"></dx:ASPxTokenBox>
+                                            <dx:ASPxTokenBox runat="server" ID="AtbEtapa" ItemValueType="System.Int32" TextField="Glosa" ValueField="Codigo" DataSourceID="OdsEtapa">
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione almenos una etapa" />
+                                            </dx:ASPxTokenBox>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
                                 <dx:LayoutItem Caption="Emisi&#243;n" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxDateEdit runat="server" ID="AdeEmision" UseMaskBehavior="true" ></dx:ASPxDateEdit>
+                                            <dx:ASPxDateEdit runat="server" ID="AdeEmision" UseMaskBehavior="true" >
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione una fecha valida" />
+                                            </dx:ASPxDateEdit>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
@@ -65,7 +78,10 @@
                                         <dx:LayoutItem Caption="Desde" ColSpan="1">
                                             <LayoutItemNestedControlCollection>
                                                 <dx:LayoutItemNestedControlContainer runat="server">
-                                                    <dx:ASPxDateEdit runat="server" ID="AdeDesde"></dx:ASPxDateEdit>
+                                                    <dx:ASPxDateEdit runat="server" ID="AdeDesde">
+                                                        <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                            RequiredField-ErrorText="Seleccione fecha valida" />
+                                                    </dx:ASPxDateEdit>
                                                 </dx:LayoutItemNestedControlContainer>
                                             </LayoutItemNestedControlCollection>
                                         </dx:LayoutItem>
@@ -74,6 +90,8 @@
                                                 <dx:LayoutItemNestedControlContainer runat="server">
                                                     <dx:ASPxDateEdit runat="server" ID="AdeHasta" >
                                                         <DateRangeSettings StartDateEditID ="AdeDesde" />
+                                                        <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione  fecha valida" />
                                                     </dx:ASPxDateEdit>
                                                 </dx:LayoutItemNestedControlContainer>
                                             </LayoutItemNestedControlCollection>
@@ -85,6 +103,8 @@
                                         <dx:LayoutItemNestedControlContainer runat="server">
                                             <dx:ASPxSpinEdit runat="server" ID="AseReferencia" MaxLength="9" NumberType="Integer" >
                                                 <SpinButtons ShowIncrementButtons="false" ></SpinButtons>
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="ingrese una referencia" />
                                             </dx:ASPxSpinEdit>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
@@ -92,7 +112,10 @@
                                 <dx:LayoutItem Caption="Descuento" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxSpinEdit runat="server" ID="AseDescuento" DisplayFormatString="{0}%" MinValue="0" MaxValue="100" MaxLength="3" NumberType="Float"></dx:ASPxSpinEdit>
+                                            <dx:ASPxSpinEdit runat="server" ID="AseDescuento" DisplayFormatString="{0}%" MinValue="0" MaxValue="100" MaxLength="3" NumberType="Float">
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Indique Descuento" />
+                                            </dx:ASPxSpinEdit>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
@@ -107,6 +130,8 @@
                                                     <dx:ListEditItem Text="Alta" Value="A" />
                                                     <dx:ListEditItem Text="En llamas" Value="L" />
                                                 </Items>
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Seleccione una Clasificacion" />
                                             </dx:ASPxRadioButtonList>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
@@ -114,28 +139,35 @@
                                 <dx:LayoutItem Caption="Marcado" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxCheckBox runat="server" AccessibilityLabelText="" CheckState="Unchecked" ID="AflDocumento_E12"></dx:ASPxCheckBox>
+                                            <dx:ASPxCheckBox runat="server" AccessibilityLabelText="" CheckState="Unchecked" ID="AcbMarcado"></dx:ASPxCheckBox>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
                                 <dx:LayoutItem Caption="Glosa" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxTextBox runat="server" ID="AtxGlosa" MaxLength="150"></dx:ASPxTextBox>
+                                            <dx:ASPxTextBox runat="server" ID="AtxGlosa" MaxLength="150">
+                                                <ValidationSettings Display="Dynamic" RequiredField-IsRequired="true" ErrorDisplayMode="Text" ErrorTextPosition="Bottom"
+                                                    RequiredField-ErrorText="Indique una glosa" />
+                                            </dx:ASPxTextBox>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
                                 <dx:LayoutItem ShowCaption="False" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxButton runat="server" ID="AflDocumento_E14"></dx:ASPxButton>
+                                            <dx:ASPxButton runat="server" ID="AbnItem" ClientInstanceName="AbnItem" Text="Agregar Items" AutoPostBack="false" UseSubmitBehavior="false">
+                                                <ClientSideEvents Click="function(s, e) { OnItemsClick(); }" />
+                                            </dx:ASPxButton>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
                                 <dx:LayoutItem ShowCaption="False" ColSpan="1">
                                     <LayoutItemNestedControlCollection>
                                         <dx:LayoutItemNestedControlContainer runat="server">
-                                            <dx:ASPxButton runat="server" ID="AflDocumento_E15"></dx:ASPxButton>
+                                            <dx:ASPxButton runat="server" ID="AbnGuardar"  ClientInstanceName="AbnGuardar" Text="Guardar" AutoPostBack="false" UseSubmitBehavior="false">
+                                                <ClientSideEvents Click ="function(s, e){ Guardar(); }"/>
+                                            </dx:ASPxButton>
                                         </dx:LayoutItemNestedControlContainer>
                                     </LayoutItemNestedControlCollection>
                                 </dx:LayoutItem>
@@ -143,16 +175,50 @@
                         </dx:LayoutGroup>
                     </Items>
                 </dx:ASPxFormLayout>
+
+                <dx:ASPxPopupControl ID="ApcItem" ClientInstanceName="ApcItem" runat="server" Width="500px" HeaderText="Items" 
+                    PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" AutoUpdatePosition="true" Modal="true">
+                    <ContentCollection>
+                        <dx:PopupControlContentControl runat="server">
+                            <dx:ASPxGridView ID="AgvItems" runat="server" Width="100%" KeyFieldName="Correlativo" AutoGenerateColumns="false"
+                                OnInit="AgvItems_Init" OnRowInserting="AgvItems_RowInserting" OnRowUpdating="AgvItems_RowUpdating" OnRowDeleting="AgvItems_RowDeleting">
+                                <ClientSideEvents EndCallback="function(s, e){EndCallbackAcpDocumento(s);}" />
+                                <SettingsBehavior AllowFocusedRow="true" />
+                                <Columns>
+                                    <dx:GridViewDataSpinEditColumn FieldName="Correlativo" VisibleIndex="0" EditFormSettings-Visible="False" Width="10%">
+                                        <PropertiesSpinEdit DisplayFormatString="g"></PropertiesSpinEdit>
+                                    </dx:GridViewDataSpinEditColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Glosa" VisibleIndex="1"></dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataSpinEditColumn FieldName="Valor" VisibleIndex="2" >
+                                        <PropertiesSpinEdit DisplayFormatString="g"></PropertiesSpinEdit>
+                                    </dx:GridViewDataSpinEditColumn>
+                                </Columns>
+                                <Toolbars>
+                                    <dx:GridViewToolbar>
+                                        <Items>
+                                            <dx:GridViewToolbarItem Command="New"></dx:GridViewToolbarItem>
+                                            <dx:GridViewToolbarItem Command="Edit"></dx:GridViewToolbarItem>
+                                            <dx:GridViewToolbarItem Command="Delete"></dx:GridViewToolbarItem>
+                                        </Items>
+                                    </dx:GridViewToolbar>
+                                </Toolbars>
+                            </dx:ASPxGridView>
+                        </dx:PopupControlContentControl>
+                    </ContentCollection>
+                </dx:ASPxPopupControl>
+
                 <asp:ObjectDataSource runat="server" ID="OdsTipoDocumento" SelectMethod="Listar" TypeName="MiApp.Bll.TipoDocumentoBll">
                     <SelectParameters>
                         <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
                     </SelectParameters>
                 </asp:ObjectDataSource>
+
                 <asp:ObjectDataSource runat="server" ID="OdsEtapa" SelectMethod="Listar" TypeName="MiApp.Bll.EtapaBll">
                     <SelectParameters>
                         <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
                     </SelectParameters>
                 </asp:ObjectDataSource>
+
             </dx:PanelContent>
         </PanelCollection>
     </dx:ASPxCallbackPanel>
