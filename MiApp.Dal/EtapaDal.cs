@@ -15,7 +15,6 @@ namespace MiApp.Dal
 
             try
             {
-
                 using (IDbConnection db = ConexionFll.ConectarPrueba())
                 {
                     DynamicParameters parametros = ConexionFll.ObtenerParametros();
@@ -32,7 +31,31 @@ namespace MiApp.Dal
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                string error = e.Message;
+                return etapas;
+            }
+        }
+
+        public static List<EtapaMod> Listar(int documentoCodigo,out SalidaMod salida)
+        {
+            List<EtapaMod> etapas = new List<EtapaMod>();
+            try
+            {
+                using (IDbConnection db = ConexionFll.ConectarPrueba())
+                {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros(new { doc_codigo = documentoCodigo});
+                    etapas = db.Query<EtapaMod>(
+                        sql: @"[dbo].[SP_Etapa_documento_Select]",
+                        param: parametros,
+                        commandType: CommandType.StoredProcedure
+                        ).AsList();
+                    salida = ConexionFll.ObtenerSalida(parametros);
+                }
+
+                return etapas;
+            }
+            catch (Exception e)
+            {
+                salida = LogFll.RegistrarExcepcion(e);
                 return etapas;
             }
         }

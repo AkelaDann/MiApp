@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DocumentoDal.cs" />
     <Compile Include="EtapaDal.cs" />
+    <Compile Include="ItemDal.cs" />
     <Compile Include="PerfilDal.cs" />
     <Compile Include="PersonaDal.cs" />
     <Compile Include="TipoDocumentoDal.cs" />

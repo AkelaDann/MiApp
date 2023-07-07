@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DocumentoBll.cs" />
     <Compile Include="EtapaBll.cs" />
+    <Compile Include="ItemBll.cs" />
     <Compile Include="PerfilBll.cs" />
     <Compile Include="PersonaBll.cs" />
     <Compile Include="TipoDocumentoBll.cs" />

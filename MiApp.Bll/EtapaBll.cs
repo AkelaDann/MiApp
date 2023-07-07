@@ -20,5 +20,18 @@ namespace MiApp.Bll
                 return new List<EtapaMod>();
             }
         }
+        public static List<EtapaMod> Listar(int documentoCodigo, out SalidaMod salida)
+        {
+            try
+            {
+                return EtapaDal.Listar(documentoCodigo, out salida);
+            }
+            catch (Exception ex)
+            {
+                salida = LogFll.RegistrarExcepcion(ex);
+                return new List<EtapaMod>();
+            }
+
+        }
     }
 }

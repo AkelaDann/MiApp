@@ -7,7 +7,8 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Mi App - <%:Page.Title%></title>
+    <link href="../../Imagen/Dimension.ico" rel="icon" />
     <link href="../../Content/Pagina/Inicio/Master.css" rel="stylesheet" />
     <link href="../../Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
     <script src="../../Scripts/Bootstrap/bootstrap.min.js"></script>
@@ -22,13 +23,13 @@
         <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop" CssClass="border-0">
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Pagina/Inicio/Esteticos/LogoDim.png" ImageHeight="50" NavigateUrl="#">
+                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Imagen/LogoDim.png" ImageHeight="50" NavigateUrl="#">
                     </dx:ASPxHyperLink> 
                     <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="float-end">
                         <Items>
-                            <dx:MenuItem Text="users"></dx:MenuItem>
-                            <dx:MenuItem Text="perfil"></dx:MenuItem>
-                            <dx:MenuItem Text="Sistema"></dx:MenuItem>
+                            <dx:MenuItem Text="Usuarios" NavigateUrl="Usuario.aspx"></dx:MenuItem>
+                            <dx:MenuItem Text="Documentos" NavigateUrl="../Demo/Documento.aspx"></dx:MenuItem>
+                            <dx:MenuItem Text="Documento Grilla" NavigateUrl="../Demo/DocumentoGrilla.aspx"></dx:MenuItem>
                         </Items>
                     </dx:ASPxMenu>
                 </dx:PanelContent>

@@ -9,6 +9,56 @@ namespace MiApp.Dal
 {
     public class DocumentoDal
     {
+        public static void Eliminar(int codigo, out SalidaMod salida)
+        {
+            try
+            {
+                using (IDbConnection db = ConexionFll.ConectarPrueba())
+                {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros(new { doc_codigo = codigo});
+                    db.Execute(
+                        sql: @"[dbo].[SP_Documento_Delete]",
+                        param: parametros,
+                        commandType: CommandType.StoredProcedure
+                        );
+                    salida = ConexionFll.ObtenerSalida(parametros);
+                }
+            }
+            catch (Exception ex)
+            {
+                salida = LogFll.RegistrarExcepcion(ex);
+            }
+        }
+        public static List<DocumentoMod> Listar(out SalidaMod salida)
+        {
+            List<DocumentoMod> documentos = new List<DocumentoMod>();
+            try
+            {
+                using (IDbConnection db = ConexionFll.ConectarPrueba())
+                {
+                    DynamicParameters parametros = ConexionFll.ObtenerParametros();
+
+                    documentos = db.Query<DocumentoMod, PersonaMod, TipoDocumentoMod, DocumentoMod>(
+                        sql: @"[dbo].[SP_Documento_Select]",
+                        param: parametros,
+                        map: (DocumentoMod, PersonaMod, TipoDocumentoMod) =>
+                        {
+                            DocumentoMod.Persona = PersonaMod;
+                            DocumentoMod.TipoDocumento = TipoDocumentoMod;
+                            return DocumentoMod;
+                        },
+                        splitOn: "per_rut, tpd_codigo",
+                        commandType: CommandType.StoredProcedure).AsList();                        
+                    salida = ConexionFll.ObtenerSalida(parametros);
+                }
+                return documentos;
+            }
+            catch (Exception ex)
+            {
+                salida = LogFll.RegistrarExcepcion(ex);
+            }
+            return documentos;
+        }
         public static void Insertar(DocumentoMod documento, out SalidaMod salida)
         {
             try
@@ -43,7 +93,6 @@ namespace MiApp.Dal
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                throw;
             }
         }
     }

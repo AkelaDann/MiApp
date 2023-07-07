@@ -27,13 +27,11 @@ namespace MiApp.Dal
                         commandType: CommandType.StoredProcedure).AsList();
                     salida = ConexionFll.ObtenerSalida(parametros);
                 }
-
                 return usuarios;
             }
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                string error = e.Message;
                 return usuarios;
             }
         }
@@ -61,8 +59,6 @@ namespace MiApp.Dal
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                
-                throw;
             }
         }
 
@@ -89,7 +85,6 @@ namespace MiApp.Dal
             catch (Exception e)
             {
                 salida = LogFll.RegistrarExcepcion(e);
-                throw;
             }   
         }
     }
