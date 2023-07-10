@@ -50,8 +50,10 @@
     <Reference Include="DevExpress.Spreadsheet.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxThemes.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Resources.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -93,13 +95,24 @@
     <Content Include="Content\Bootstrap\bootstrap.rtl.css" />
     <Content Include="Content\Bootstrap\bootstrap.rtl.min.css" />
     <Content Include="Content\Pagina\Inicio\Master.css" />
+    <Content Include="Content\SweetAlert2\sweetalert2.css" />
+    <Content Include="Content\SweetAlert2\sweetalert2.min.css" />
     <Content Include="Content\Toastr\toastr.css" />
     <Content Include="Content\Toastr\toastr.min.css" />
     <Content Include="Imagen\Dimension.ico" />
+    <Content Include="Imagen\Modulo\Demo.png" />
+    <Content Include="Imagen\Modulo\Inicio.png" />
+    <Content Include="Imagen\Modulo\LogoDim.png" />
+    <Content Include="Imagen\Modulo\modules.png" />
+    <Content Include="Imagen\Modulo\Others.png" />
+    <Content Include="Imagen\Modulo\Usuarios.png" />
+    <Content Include="Imagen\Modulo\Varios.jpg" />
+    <Content Include="Pagina\Demo\Arbol.aspx" />
     <Content Include="Pagina\Demo\Documento.aspx" />
     <Content Include="Imagen\LogoDim.png" />
     <Content Include="Pagina\Demo\DocumentoGrilla.aspx" />
     <Content Include="Pagina\Inicio\Usuario.aspx" />
+    <Content Include="Pagina\Varios\Tarjeta.aspx" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.min.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.esm.js" />
@@ -113,6 +126,8 @@
     <Content Include="Scripts\Pagina\Demo\DocumentoGrilla.js" />
     <Content Include="Scripts\Pagina\Inicio\Master.js" />
     <Content Include="Scripts\Pagina\Inicio\Usuario.js" />
+    <Content Include="Scripts\SweetAlert2\sweetalert2.js" />
+    <Content Include="Scripts\SweetAlert2\sweetalert2.min.js" />
     <Content Include="Scripts\Toastr\jquery-1.6.3.js" />
     <Content Include="Scripts\Toastr\jquery-1.6.3.min.js" />
     <Content Include="Scripts\Toastr\toastr.js" />
@@ -120,6 +135,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pagina\Demo\Arbol.aspx.cs">
+      <DependentUpon>Arbol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina\Demo\Arbol.aspx.designer.cs">
+      <DependentUpon>Arbol.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pagina\Demo\Documento.aspx.cs">
       <DependentUpon>Documento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,6 +169,13 @@
     </Compile>
     <Compile Include="Pagina\Inicio\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina\Varios\Tarjeta.aspx.cs">
+      <DependentUpon>Tarjeta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina\Varios\Tarjeta.aspx.designer.cs">
+      <DependentUpon>Tarjeta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,6 +228,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Pagina\Varios\" />
+    <Folder Include="Scripts\Pagina\Varios\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

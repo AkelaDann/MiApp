@@ -15,10 +15,14 @@ namespace MiApp.Fll
             tablaItem.Columns.Add("itm_valor");
             tablaItem.Columns.Add("doc_codigo");
 
-            foreach (ItemMod item in documento.Items)
+            if (documento.Items.Count > 0)
             {
-                tablaItem.Rows.Add(item.Correlativo, item.Glosa, item.Valor,documento.Codigo);
-            }
+                foreach (ItemMod item in documento.Items)
+                {
+                    tablaItem.Rows.Add(item.Correlativo, item.Glosa, item.Valor, documento.Codigo);
+                }
+            } 
+            
 
             return tablaItem;
         }

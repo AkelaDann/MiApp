@@ -1,7 +1,18 @@
 ﻿//const { Toastr }  = require("../../Bootstrap/bootstrap.esm");
 
 function Confirmar(mensaje) {
-    return confirm(mensaje);
+    return Swal.fire({
+        icon: 'question',
+        title: 'Pregunta',
+        text: mensaje,
+        showConfirmButton: true,
+        confirmButtonText: 'Si, estoy seguro',
+        showDenyButton: true,
+        denyButtonText: 'No, ya me arrepntí',
+        allowOutsideClick: false
+    }).then(response => {
+        return response.value;
+    });
 }
 
 function EnviarMensaje(codigo,mensaje) {

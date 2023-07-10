@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArbolMod.cs" />
     <Compile Include="DocumentoMod.cs" />
     <Compile Include="EtapaMod.cs" />
+    <Compile Include="FormularioMod.cs" />
     <Compile Include="ItemMod.cs" />
+    <Compile Include="ModuloMod.cs" />
     <Compile Include="PerfilMod.cs" />
     <Compile Include="PersonaMod.cs" />
     <Compile Include="SalidaMod.cs" />

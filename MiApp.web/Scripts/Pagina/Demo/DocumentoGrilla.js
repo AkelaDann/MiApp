@@ -15,12 +15,15 @@ function Desenfocar() {
     AgvDocumentoGrilla.SetFocusedRowIndex(-1);
 }
 
-function EliminarDesdeFuera() {
+async function EliminarDesdeFuera() {
     if (AgvDocumentoGrilla.focusedRowIndex >= 0) {
-        
-        if (Confirmar('¿Seguro que desea eliminar el documento?')) {
-            AgvDocumentoGrilla.DeleteRow(AgvDocumentoGrilla.focusedRowIndex);
+        async function datosGrilla(valores) {
+            if (await Confirmar('¿Seguro que desea eliminar el documento con el codigo'+ valores[0]+ 'y la glosa: '+valores[1]+'?')) {
+                AgvDocumentoGrilla.DeleteRow(AgvDocumentoGrilla.focusedRowIndex);
+            }
         }
+        AgvDocumentoGrilla.GetRowValues(AgvDocumentoGrilla.focusedRowIndex, 'Codigo;Glosa', datosGrilla);
+        
     } else {
         EnviarMensaje(0, 'Seleccione un documento');
     } 

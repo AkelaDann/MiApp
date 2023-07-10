@@ -1,12 +1,23 @@
-﻿function ConfirmarUsuarioGuardar(AgvUsuario) {
-    if (Confirmar('Se dispone a guardar el registro. ¿Está seguro?')) {
-        AgvUsuario.UpdateEdit();
+﻿async function ConfirmarUsuarioGuardar(AgvUsuario) {
+    if (ASPxClientEdit.ValidateEditorsInContainerById(AgvUsuario)) {
+        if (await Confirmar('Se dispone a guardar el registro. ¿Está seguro?')) {
+            AgvUsuario.UpdateEdit();
+        }
+    }
+}
+ 
+
+async function ConfirmarUsuarioCancelar(AgvUsuario) {
+    if (await Confirmar('Se dispone a cancelar cambios en el registro. ¿Está seguro?')){
+        AgvUsuario.CancelEdit();
     }
 }
 
-function ConfirmarUsuarioCancelar(AgvUsuario) {
-    if (Confirmar('Se dispone a cancelar cambios en el registro. ¿Está seguro?')){
-        AgvUsuario.CancelEdit();
+async function OnToolbarItemClick(s, e) {
+    if (e.item.name == "Delete") {
+        if (await Confirmar("Se dispone a eliminar este Usuario ¿Esta segunro?")) {
+            s.DeleteRow(s.focusedRowIndex);
+        }
     }
 }
 

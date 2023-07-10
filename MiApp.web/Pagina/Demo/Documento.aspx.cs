@@ -133,7 +133,7 @@ namespace MiApp.web.Pagina.Demo
                 double total = 0;
                 PersonaMod persona = new PersonaMod(Convert.ToInt32(AcbPersona.SelectedItem.Value));
                 TipoDocumentoMod tipoDocumento = new TipoDocumentoMod(Convert.ToInt32(AcbTipoDocumento.SelectedItem.Value));
-                List<ItemMod> items = (List<ItemMod>)Session["items"];
+                List<ItemMod> items = (Session["items"] != null)?(List<ItemMod>)Session["items"]:new List<ItemMod>();
                 List<EtapaMod> etapas = new List<EtapaMod>();
                 foreach (string etapa in AtbEtapa.Value.ToString().Split(','))
                 {

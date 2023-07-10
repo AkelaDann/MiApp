@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiApp.Fll", "MiApp.Fll\MiAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiApp.Mod", "MiApp.Mod\MiApp.Mod.csproj", "{335F3FC8-84F3-4865-AB1D-89B309F23635}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CapacitacionBD", "CapacitacionBD\CapacitacionBD.sqlproj", "{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{335F3FC8-84F3-4865-AB1D-89B309F23635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{335F3FC8-84F3-4865-AB1D-89B309F23635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{335F3FC8-84F3-4865-AB1D-89B309F23635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57AAAF41-AC0F-4B3B-97FB-BB07C0D4CD46}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

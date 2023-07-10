@@ -33,13 +33,13 @@ namespace MiApp.web.Pagina.Inicio
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control ASPxPanelSuperior.
+        /// Control AplSuperior.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel ASPxPanelSuperior;
+        protected global::DevExpress.Web.ASPxPanel AplSuperior;
 
         /// <summary>
         /// Control DimLogo.
@@ -51,40 +51,40 @@ namespace MiApp.web.Pagina.Inicio
         protected global::DevExpress.Web.ASPxHyperLink DimLogo;
 
         /// <summary>
-        /// Control ASPxMenu1.
+        /// Control menu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxMenu ASPxMenu1;
+        protected global::DevExpress.Web.ASPxMenu menu;
 
         /// <summary>
-        /// Control ASPxPanelIzquierdo.
+        /// Control AplIzquierdo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel ASPxPanelIzquierdo;
+        protected global::DevExpress.Web.ASPxPanel AplIzquierdo;
 
         /// <summary>
-        /// Control ASPxNavBar1.
+        /// Control AnrMenuIzq.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxNavBar ASPxNavBar1;
+        protected global::DevExpress.Web.ASPxNavBar AnrMenuIzq;
 
         /// <summary>
-        /// Control ASPxContenido.
+        /// Control AplContenido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel ASPxContenido;
+        protected global::DevExpress.Web.ASPxPanel AplContenido;
 
         /// <summary>
         /// Control ContentPlaceHolder1.
@@ -96,13 +96,13 @@ namespace MiApp.web.Pagina.Inicio
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
 
         /// <summary>
-        /// Control ASPxInferior.
+        /// Control AplInferior.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel ASPxInferior;
+        protected global::DevExpress.Web.ASPxPanel AplInferior;
 
         /// <summary>
         /// Control ASPxLabel1.

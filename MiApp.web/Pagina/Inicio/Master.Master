@@ -15,32 +15,34 @@
     <script src="../../Scripts/Toastr/jquery-1.6.3.min.js"></script>
     <script src="../../Scripts/Toastr/toastr.min.js"></script>
     <link href="../../Content/Toastr/toastr.min.css" rel="stylesheet" />
+    <link href="../../Content/SweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="../../Scripts/SweetAlert2/sweetalert2.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>    
     <form id="form1" runat="server">
-        <dx:ASPxPanel ID="ASPxPanelSuperior" runat="server" FixedPosition="WindowTop" CssClass="border-0">
+        <dx:ASPxPanel ID="AplSuperior" runat="server" FixedPosition="WindowTop" CssClass="border-0">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Imagen/LogoDim.png" ImageHeight="50" NavigateUrl="#">
                     </dx:ASPxHyperLink> 
-                    <dx:ASPxMenu ID="ASPxMenu1" runat="server" CssClass="float-end">
-                        <Items>
+                    <dx:ASPxMenu ID="menu" runat="server" CssClass="float-end" OnInit="menu_Init"   />
+                        <%--<Items>
                             <dx:MenuItem Text="Usuarios" NavigateUrl="Usuario.aspx"></dx:MenuItem>
                             <dx:MenuItem Text="Documentos" NavigateUrl="../Demo/Documento.aspx"></dx:MenuItem>
                             <dx:MenuItem Text="Documento Grilla" NavigateUrl="../Demo/DocumentoGrilla.aspx"></dx:MenuItem>
                         </Items>
-                    </dx:ASPxMenu>
+                    </dx:ASPxMenu>--%>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxPanelIzquierdo" runat="server" FixedPosition="WindowLeft" Collapsible="true" CssClass="border-0">
+        <dx:ASPxPanel ID="AplIzquierdo" runat="server" FixedPosition="WindowLeft" Collapsible="true" CssClass="border-0">
             <SettingsAdaptivity CollapseAtWindowInnerWidth="900" />
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" CssClass="fondo">
-                        <Groups>                            
+                    <dx:ASPxNavBar ID="AnrMenuIzq" runat="server" CssClass="fondo"  OnInit="AnrMenuIzq_Init"/>
+                       <%-- <Groups>                            
                             <dx:NavBarGroup Text="Principal">
                                 <Items>
                                     <dx:NavBarItem text ="Usuario" NavigateUrl="Usuario.aspx"></dx:NavBarItem>
@@ -56,11 +58,11 @@
                                 </Items>
                             </dx:NavBarGroup>
                         </Groups>
-                    </dx:ASPxNavBar>
+                    </dx:ASPxNavBar>--%>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxContenido" runat="server" FixedPosition="None" CssClass="border-0 container-fluid fondo">
+        <dx:ASPxPanel ID="AplContenido" runat="server" FixedPosition="None" CssClass="border-0 container-fluid fondo">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -68,7 +70,7 @@
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
-        <dx:ASPxPanel ID="ASPxInferior" runat="server" FixedPosition="WindowBottom" CssClass="border-0 text-center">
+        <dx:ASPxPanel ID="AplInferior" runat="server" FixedPosition="WindowBottom" CssClass="border-0 text-center">
             <PanelCollection>
                 <dx:PanelContent runat="server">
                     <dx:ASPxLabel ID="ASPxLabel1" runat="server" Text="Pie de pagina"></dx:ASPxLabel>

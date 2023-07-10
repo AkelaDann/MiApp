@@ -15,7 +15,9 @@
 
                             <dx:ASPxGridView ID="AgvUsuario" ClientInstanceName="AgvUsuario" DataSourceID="OdsUsuario" runat="server" 
                                 AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%" OnStartRowEditing="AgvUsuario_StartRowEditing">                                
-                                <ClientSideEvents EndCallback="function(s,e){ EndcallbackAgvUsuario(s);}" ></ClientSideEvents >
+                                <ClientSideEvents EndCallback="function(s,e){ EndcallbackAgvUsuario(s);}"
+                                    ToolbarItemClick="function(s, e){ OnToolbarItemClick(s, e);}"></ClientSideEvents >
+
                                 <Settings ShowFilterRowMenu="true" ShowHeaderFilterButton="True" VerticalScrollBarMode="Auto"></Settings>
 
                                 <SettingsBehavior AllowFocusedRow="True"></SettingsBehavior>
@@ -77,7 +79,7 @@
                                         <Items>
                                             <dx:GridViewToolbarItem Command="New"></dx:GridViewToolbarItem>
                                             <dx:GridViewToolbarItem Command="Edit"></dx:GridViewToolbarItem>
-                                            <dx:GridViewToolbarItem Command="Delete"></dx:GridViewToolbarItem>
+                                            <dx:GridViewToolbarItem Name="Delete" Text="Eliminar" Image-IconID="xaf_action_delete_svg_16x16" ToolTip="Eliminar"></dx:GridViewToolbarItem> <%--<dx:GridViewToolbarItem Command="Delete"></dx:GridViewToolbarItem>--%>
                                             <dx:GridViewToolbarItem Command="Refresh"></dx:GridViewToolbarItem>
                                         </Items>
                                     </dx:GridViewToolbar>

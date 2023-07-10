@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArbolDal.cs" />
     <Compile Include="DocumentoDal.cs" />
     <Compile Include="EtapaDal.cs" />
+    <Compile Include="FormularioDal.cs" />
     <Compile Include="ItemDal.cs" />
+    <Compile Include="ModuloDal.cs" />
     <Compile Include="PerfilDal.cs" />
     <Compile Include="PersonaDal.cs" />
     <Compile Include="TipoDocumentoDal.cs" />
