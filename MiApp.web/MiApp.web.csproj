@@ -43,16 +43,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Spreadsheet.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Web.ASPxSpreadsheet.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxThemes.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.Resources.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Web, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Web.WebForms, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -99,6 +112,8 @@
     <Content Include="Content\SweetAlert2\sweetalert2.min.css" />
     <Content Include="Content\Toastr\toastr.css" />
     <Content Include="Content\Toastr\toastr.min.css" />
+    <Content Include="ControlUsuario\ControlPersona.ascx" />
+    <Content Include="Global.asax" />
     <Content Include="Imagen\Dimension.ico" />
     <Content Include="Imagen\Modulo\Demo.png" />
     <Content Include="Imagen\Modulo\Inicio.png" />
@@ -111,7 +126,9 @@
     <Content Include="Pagina\Demo\Documento.aspx" />
     <Content Include="Imagen\LogoDim.png" />
     <Content Include="Pagina\Demo\DocumentoGrilla.aspx" />
+    <Content Include="Pagina\Demo\PruebaControlPersona.aspx" />
     <Content Include="Pagina\Inicio\Usuario.aspx" />
+    <Content Include="Pagina\Varios\Reporte.aspx" />
     <Content Include="Pagina\Varios\Tarjeta.aspx" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.bundle.min.js" />
@@ -122,8 +139,10 @@
     <Content Include="Content\Toastr\toastr.scss" />
     <Content Include="Content\Toastr\toastr.less" />
     <None Include="Scripts\Toastr\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\ControlUsuario\ControlPersona.js" />
     <Content Include="Scripts\Pagina\Demo\Documento.js" />
     <Content Include="Scripts\Pagina\Demo\DocumentoGrilla.js" />
+    <Content Include="Scripts\Pagina\Demo\PruebaControlPersona.js" />
     <Content Include="Scripts\Pagina\Inicio\Master.js" />
     <Content Include="Scripts\Pagina\Inicio\Usuario.js" />
     <Content Include="Scripts\SweetAlert2\sweetalert2.js" />
@@ -135,6 +154,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlUsuario\ControlPersona.ascx.cs">
+      <DependentUpon>ControlPersona.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlUsuario\ControlPersona.ascx.designer.cs">
+      <DependentUpon>ControlPersona.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Pagina\Demo\Arbol.aspx.cs">
       <DependentUpon>Arbol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +185,13 @@
     <Compile Include="Pagina\Demo\DocumentoGrilla.aspx.designer.cs">
       <DependentUpon>DocumentoGrilla.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pagina\Demo\PruebaControlPersona.aspx.cs">
+      <DependentUpon>PruebaControlPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina\Demo\PruebaControlPersona.aspx.designer.cs">
+      <DependentUpon>PruebaControlPersona.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pagina\Inicio\Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +205,13 @@
     </Compile>
     <Compile Include="Pagina\Inicio\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina\Varios\Reporte.aspx.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina\Varios\Reporte.aspx.designer.cs">
+      <DependentUpon>Reporte.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pagina\Varios\Tarjeta.aspx.cs">
       <DependentUpon>Tarjeta.aspx</DependentUpon>
