@@ -22,11 +22,11 @@ namespace MiApp.Bll
             
         }
 
-        public static void InsertarActualizarUsuario(int Codigo, string Nombre, int CodigoPerfil, out SalidaMod salida)
+        public static void InsertarActualizarUsuario(int Codigo, string Nombre, int PerfilCodigo, out SalidaMod salida)
         {
             try
             {
-                UsuarioMod usuario = new UsuarioMod(Codigo, Nombre, new PerfilMod(CodigoPerfil));
+                UsuarioMod usuario = new UsuarioMod(Codigo, Nombre, new PerfilMod(PerfilCodigo));
                 UsuarioDal.InsertarActualizar(usuario, out salida);
             }
             catch (Exception e)

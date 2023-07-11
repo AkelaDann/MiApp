@@ -10,7 +10,7 @@ namespace MiApp.web.Pagina.Inicio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.AppRelativeVirtualPath.Contains("Tarjeta.aspx"))
+            if (Page.AppRelativeVirtualPath.Contains("/Varios/"))
             {
                 AplSuperior.Visible = false;
                 AplIzquierdo.Visible = false;

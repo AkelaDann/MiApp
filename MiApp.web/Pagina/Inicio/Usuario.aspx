@@ -14,7 +14,8 @@
                             <dx:ASPxLabel ID="AlbTitulo" runat="server" Text="Usuarios" Font-Bold="true"></dx:ASPxLabel>
 
                             <dx:ASPxGridView ID="AgvUsuario" ClientInstanceName="AgvUsuario" DataSourceID="OdsUsuario" runat="server" 
-                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%" OnStartRowEditing="AgvUsuario_StartRowEditing">                                
+                                AutoGenerateColumns="false" KeyFieldName="Codigo" Width="100%" OnStartRowEditing="AgvUsuario_StartRowEditing"
+                                OnToolbarItemClick="AgvUsuario_ToolbarItemClick"    >                                
                                 <ClientSideEvents EndCallback="function(s,e){ EndcallbackAgvUsuario(s);}"
                                     ToolbarItemClick="function(s, e){ OnToolbarItemClick(s, e);}"></ClientSideEvents >
 
@@ -26,7 +27,7 @@
                                     <Items>
                                         <dx:GridViewColumnLayoutItem ColumnName="Codigo" ColSpan="1" Visible="false" Name="Codigo" ></dx:GridViewColumnLayoutItem>
                                         <dx:GridViewColumnLayoutItem ColumnName="Nombre" ColSpan="1"></dx:GridViewColumnLayoutItem>
-                                        <dx:GridViewColumnLayoutItem ColumnName="Perfil.CodigoPerfil" ColSpan="1" ></dx:GridViewColumnLayoutItem>
+                                        <dx:GridViewColumnLayoutItem ColumnName="Perfil.Codigo" ColSpan="1" ></dx:GridViewColumnLayoutItem>
                                         <dx:GridViewColumnLayoutItem ColSpan="2" ColumnSpan="2" HorizontalAlign="Right" VerticalAlign="Bottom" ShowCaption="False"> 
                                             <Template>
                                                 <dx:ASPxButton ID="AbnUsuarioGuardar" runat="server" Text="Guardar" AutoPostBack="false" UseSubmitBehavior="false" RenderMode="Secondary" Width="50%">
@@ -66,8 +67,8 @@
                                             </ValidationSettings>
                                         </PropertiesTextEdit>
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataComboBoxColumn FieldName="Perfil.CodigoPerfil" VisibleIndex="2">
-                                        <PropertiesComboBox ValueType="System.Int32" DataSourceID="OdsPerfiles" TextField="Glosa" ValueField="CodigoPerfil">
+                                    <dx:GridViewDataComboBoxColumn FieldName="Perfil.Codigo" VisibleIndex="2">
+                                        <PropertiesComboBox ValueType="System.Int32" DataSourceID="OdsPerfiles" TextField="Glosa" ValueField="Codigo">
                                             <ValidationSettings>
                                                 <RequiredField IsRequired="true" ErrorText="Debe indicar un perfil" /> 
                                             </ValidationSettings>
@@ -81,6 +82,9 @@
                                             <dx:GridViewToolbarItem Command="Edit"></dx:GridViewToolbarItem>
                                             <dx:GridViewToolbarItem Name="Delete" Text="Eliminar" Image-IconID="xaf_action_delete_svg_16x16" ToolTip="Eliminar"></dx:GridViewToolbarItem> <%--<dx:GridViewToolbarItem Command="Delete"></dx:GridViewToolbarItem>--%>
                                             <dx:GridViewToolbarItem Command="Refresh"></dx:GridViewToolbarItem>
+                                            <dx:GridViewToolbarItem Name="Print" ToolTip="Imprimir" Text="Imprimir" Target="_blank" NavigateUrl="../Varios/Reporte.aspx">
+                                                <Image IconID="print_print_svg_16x16"></Image>
+                                            </dx:GridViewToolbarItem>
                                         </Items>
                                     </dx:GridViewToolbar>
                                 </Toolbars>
@@ -104,7 +108,7 @@
         <InsertParameters>
             <asp:Parameter Name="Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
-            <asp:Parameter Name="Perfil.CodigoPerfil" Type="Int32"></asp:Parameter>
+            <asp:Parameter Name="Perfil.Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
         </InsertParameters>
         <SelectParameters>
@@ -113,7 +117,7 @@
         <UpdateParameters>
             <asp:Parameter Name="Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Name="Nombre" Type="String"></asp:Parameter>
-            <asp:Parameter Name="Perfil.CodigoPerfil" Type="Int32"></asp:Parameter>
+            <asp:Parameter Name="Perfil.Codigo" Type="Int32"></asp:Parameter>
             <asp:Parameter Direction="Output" Name="salida" Type="Object"></asp:Parameter>
         </UpdateParameters>
     </asp:ObjectDataSource>

@@ -23,7 +23,7 @@ BEGIN
 			MODULO M
 		INNER JOIN 
 			FORMULARIO F
-				ON M.mdo_codigo = F.mdo_codigo
+				ON M.MDO_CODIGO = F.mdo_codigo
 
 		IF(@@ROWCOUNT>0)
 			BEGIN

@@ -1,6 +1,9 @@
-﻿using MiApp.Fll;
+﻿using DevExpress.XtraReports.UI;
+using MiApp.Fll;
 using MiApp.Mod;
+using MiApp.web.Reporte;
 using System;
+using System.Collections.Generic;
 using System.Web.UI.WebControls;
 
 namespace MiApp.web.Pagina.Inicio
@@ -81,6 +84,18 @@ namespace MiApp.web.Pagina.Inicio
                 
             }
             
+        }
+
+        protected void AgvUsuario_ToolbarItemClick(object source, DevExpress.Web.Data.ASPxGridViewToolbarItemClickEventArgs e)
+        {
+            if (e.Item.Name.Equals("Print"))
+            {
+                XtraUsuario xtraUsuario = new XtraUsuario
+                {
+                    DataSource = (List<UsuarioMod>) OdsUsuario.Select()
+                };
+                Session["reporte"] = xtraUsuario;
+            }
         }
     }
 }

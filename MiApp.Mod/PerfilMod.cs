@@ -2,15 +2,15 @@
 {
     public class PerfilMod
     {
-        public int CodigoPerfil { get; set; }
+        public int Codigo { get; set; }
         public string  Glosa { get; set; }
 
-        public PerfilMod(int codigoPerfil)
+        public PerfilMod(int perfilCodigo)
         {
-            CodigoPerfil = codigoPerfil;
+            Codigo = perfilCodigo;
         }
 
-        public PerfilMod(int codigoPerfil,string glosa ):this(codigoPerfil)
+        public PerfilMod(int perfilCodigo, string glosa ):this(perfilCodigo)
         {
             Glosa = glosa;
         }

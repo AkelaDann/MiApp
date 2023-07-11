@@ -6,11 +6,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="200px">
+    <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="100%">
         <PanelCollection>
             <dx:PanelContent runat="server">
                 <dx:ASPxWebDocumentViewer runat="server" Id="AwdReporte"></dx:ASPxWebDocumentViewer>
-            </dx:PanelContent>
+            </dx:PanelContent>  
         </PanelCollection>
     </dx:ASPxCallbackPanel>
 </asp:Content>
+ 

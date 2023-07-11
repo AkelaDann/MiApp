@@ -18,7 +18,7 @@ namespace MiApp.Fll
 
             for (int i = 0; i < largo; i++)
             {
-                e.InputParameters.Insert(i, llaves[i].Replace("Perfil.", string.Empty),valores[i]);
+                e.InputParameters.Insert(i, llaves[i].Replace(".", string.Empty),valores[i]);
             }
             
         }

@@ -19,6 +19,9 @@ async function OnToolbarItemClick(s, e) {
             s.DeleteRow(s.focusedRowIndex);
         }
     }
+    if (e.item.name=="Print") {
+        e.processOnServer = true;
+    }
 }
 
 function EndcallbackAgvUsuario(s) {

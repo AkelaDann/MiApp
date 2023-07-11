@@ -23,7 +23,7 @@ namespace MiApp.Dal
                         sql: @"SP_Usuario_Select",
                         param: parametros,
                         map: (UsuarioMod, PerfilMod) => { UsuarioMod.Perfil = PerfilMod; return UsuarioMod; },
-                        splitOn:"CodigoPerfil",
+                        splitOn: "PerfilCodigo",
                         commandType: CommandType.StoredProcedure).AsList();
                     salida = ConexionFll.ObtenerSalida(parametros);
                 }
@@ -46,7 +46,7 @@ namespace MiApp.Dal
                     {
                         codigo = usuario.Codigo,
                         nombre = usuario.Nombre,
-                        codigoPerfil = usuario.Perfil.CodigoPerfil
+                        PerfilCodigo = usuario.Perfil.Codigo
                     });
                     db.Execute(
                         sql: "SP_Usuario_Insert_Update",
