@@ -28,10 +28,12 @@
                     <ClientSideEvents Click="function(s, e){ EliminarDesdeFuera();}" />
                 </dx:ASPxButton>
 
-                <dx:ASPxGridView runat="server" ID="AgvDocumentoGrilla" ClientInstanceName="AgvDocumentoGrilla" AutoGenerateColumns="False" DataSourceID="OdsDocumentosGrilla" 
-                    Width="100%" KeyFieldName="Codigo">
+                <dx:ASPxGridView runat="server" ID="AgvDocumentoGrilla" ClientInstanceName="AgvDocumentoGrilla" AutoGenerateColumns="False" 
+                    DataSourceID="OdsDocumentosGrilla" OnToolbarItemClick="AgvDocumentoGrilla_ToolbarItemClick"
+                    Width="100%" KeyFieldName="Codigo" >
                     <ClientSideEvents EndCallback="function(s, e){EndCallbackAgvDocumentoGrilla(s);}"
-                            CustomButtonClick="function(s,e){ LevantaPopUpInyectarItems(s, e);}"    />
+                            CustomButtonClick="function(s, e){ LevantaPopUpInyectarItems(s, e);}" 
+                            ToolbarItemClick="function(s, e){OnToolbarItemClick(s, e);}"/>
                     <SettingsPager mode="ShowAllRecords"></SettingsPager>
                     <SettingsBehavior AllowFocusedRow="true" />
                     <Settings ShowFilterRowMenu="true" ShowHeaderFilterButton="true" VerticalScrollBarMode="Auto" />
@@ -96,6 +98,9 @@
                             <Items>
                                 <dx:GridViewToolbarItem Command="ExportToXlsx"></dx:GridViewToolbarItem>
                                 <dx:GridViewToolbarItem Command="Refresh"></dx:GridViewToolbarItem>
+                                <dx:GridViewToolbarItem Name="Print" ToolTip="Imprimir" Text="Imprimir">
+                                                <Image IconID="print_print_svg_16x16"></Image>
+                                            </dx:GridViewToolbarItem>
                             </Items>
                         </dx:GridViewToolbar>
                     </Toolbars>

@@ -25,7 +25,7 @@
                         <dx:LayoutItem Caption="Rut" ColSpan="1">
                             <LayoutItemNestedControlCollection>
                                 <dx:LayoutItemNestedControlContainer runat="server">
-                                    <dx:ASPxButtonEdit runat="server" ID="AbeRut" ClientInstanceName="AbeRut" >
+                                    <dx:ASPxButtonEdit runat="server" ID="AbeRut" ClientInstanceName="AbeRut" ReadOnly="true">
                                         <ClientSideEvents ButtonClick="function(s, e){ LlamarControlPersona();}" />
                                         <Buttons>
                                             <dx:EditButton>
@@ -39,7 +39,7 @@
                         <dx:LayoutItem Caption="Nombre" ColSpan="1">
                             <LayoutItemNestedControlCollection>
                                 <dx:LayoutItemNestedControlContainer runat="server">
-                                    <dx:ASPxTextBox runat="server" ID="AtxNombre" ClientInstanceName="AtxNombre"></dx:ASPxTextBox>
+                                    <dx:ASPxTextBox runat="server" ID="AtxNombre" ClientInstanceName="AtxNombre" ReadOnly="true"></dx:ASPxTextBox>
                                 </dx:LayoutItemNestedControlContainer>
                             </LayoutItemNestedControlCollection>
                         </dx:LayoutItem>

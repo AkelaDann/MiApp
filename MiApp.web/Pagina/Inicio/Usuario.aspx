@@ -82,7 +82,7 @@
                                             <dx:GridViewToolbarItem Command="Edit"></dx:GridViewToolbarItem>
                                             <dx:GridViewToolbarItem Name="Delete" Text="Eliminar" Image-IconID="xaf_action_delete_svg_16x16" ToolTip="Eliminar"></dx:GridViewToolbarItem> <%--<dx:GridViewToolbarItem Command="Delete"></dx:GridViewToolbarItem>--%>
                                             <dx:GridViewToolbarItem Command="Refresh"></dx:GridViewToolbarItem>
-                                            <dx:GridViewToolbarItem Name="Print" ToolTip="Imprimir" Text="Imprimir" Target="_blank" NavigateUrl="../Varios/Reporte.aspx">
+                                            <dx:GridViewToolbarItem Name="Print" ToolTip="Imprimir" Text="Imprimir"> <%--Target="_blank" NavigateUrl="../Varios/Reporte.aspx"--%>
                                                 <Image IconID="print_print_svg_16x16"></Image>
                                             </dx:GridViewToolbarItem>
                                         </Items>

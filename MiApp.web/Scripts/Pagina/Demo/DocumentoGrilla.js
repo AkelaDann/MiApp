@@ -9,10 +9,17 @@
         ApcItem.Hide();
         AgvDocumentoGrilla.ExpandDetailRow(AgvDocumentoGrilla.focusedRowIndex);
     }
+    Imprimir(s);
 }
 
 function Desenfocar() {
     AgvDocumentoGrilla.SetFocusedRowIndex(-1);
+}
+
+function OnToolbarItemClick(s, e) {
+    if (e.item.name=="Print") {
+        e.processOnServer = true;
+    }
 }
 
 async function EliminarDesdeFuera() {

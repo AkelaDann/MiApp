@@ -105,15 +105,6 @@ namespace MiApp.web.Pagina.Demo
         protected global::DevExpress.Web.ASPxButton AbnInyectar;
 
         /// <summary>
-        /// Control ASPxSpreadsheet1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet ASPxSpreadsheet1;
-
-        /// <summary>
         /// Control AsdItem.
         /// </summary>
         /// <remarks>

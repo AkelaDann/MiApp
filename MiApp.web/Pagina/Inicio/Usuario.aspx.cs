@@ -94,6 +94,7 @@ namespace MiApp.web.Pagina.Inicio
                 {
                     DataSource = (List<UsuarioMod>) OdsUsuario.Select()
                 };
+                AgvUsuario.JSProperties["cpImprimir"] = true;
                 Session["reporte"] = xtraUsuario;
             }
         }

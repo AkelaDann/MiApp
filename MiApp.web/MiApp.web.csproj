@@ -232,6 +232,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reporte\XtraDocumentoGrilla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\XtraDocumentoGrilla.Designer.cs">
+      <DependentUpon>XtraDocumentoGrilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporte\XtraUsuario.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\XtraDocumentoGrilla.resx">
+      <DependentUpon>XtraDocumentoGrilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte\XtraUsuario.resx">
       <DependentUpon>XtraUsuario.cs</DependentUpon>

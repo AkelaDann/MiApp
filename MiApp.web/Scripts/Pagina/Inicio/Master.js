@@ -35,6 +35,12 @@ function EnviarMensaje(codigo,mensaje) {
         Command: toastr["success"](mensaje);
     }
 }
+function Imprimir(s) {
+    if (s.cpImprimir) {
+        window.open("../Varios/Reporte.aspx");
+        delete s.cpImprimir;
+    }
+}
 
 ASPxClientControl.GetControlCollection().ControlsInitialized.AddHandler(function (s, e) {
     if(window.UpdateGridHeight)

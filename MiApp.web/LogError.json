@@ -691,3 +691,12 @@
   "Destino": null,
   "SeguimientoPila": null
 }
+{
+  "Codigo": 638246915670659208,
+  "Fecha": "2023-07-11T16:59:27.0659208-04:00",
+  "CodigoExcepcion": -1,
+  "Mensaje": "Código: [515], \r\n\t\t\t\t\t\t\t\tMensaje: [No se puede insertar el valor NULL en la columna 'itm_correlativo', tabla 'Capacitacion.dbo.ITEM'. La columna no admite valores NULL. Error de INSERT.], \r\n\t\t\t\t\t\t\t\tProcedimiento: [dbo.SP_Item_Insert], \r\n\t\t\t\t\t\t\t\tLínea: [24], \r\n\t\t\t\t\t\t\t\tNivel de severidad: [16], \r\n\t\t\t\t\t\t\t\tEstado: [2].",
+  "Objeto": null,
+  "Destino": null,
+  "SeguimientoPila": null
+}

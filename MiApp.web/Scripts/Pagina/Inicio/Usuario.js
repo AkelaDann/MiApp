@@ -30,6 +30,8 @@ function EndcallbackAgvUsuario(s) {
         delete s.cpCodigo;
         delete s.cpMensaje;
     }
+
+    Imprimir(s);
 }
 
 function UpdateGridHeight() {

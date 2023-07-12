@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [cap]
+    WITH PASSWORD = N'v8|>rvh<jex.Kp{Whdsqs{jtmsFT7_&#$!~<vwli|gkzackg', SID = 0x145DB75650A7B84392BE07E680B89940, DEFAULT_DATABASE = [Capacitacion], DEFAULT_LANGUAGE = [Español], CHECK_POLICY = OFF;
+

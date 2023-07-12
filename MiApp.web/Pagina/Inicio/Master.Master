@@ -25,7 +25,7 @@
         <dx:ASPxPanel ID="AplSuperior" runat="server" FixedPosition="WindowTop" CssClass="border-0">
             <PanelCollection>
                 <dx:PanelContent runat="server">
-                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Imagen/LogoDim.png" ImageHeight="50" NavigateUrl="#">
+                    <dx:ASPxHyperLink ID="DimLogo" runat="server" CssClass="float-start" Text="Logotipo" ImageUrl="~/Imagen/LogoDim.png" ImageHeight="50" NavigateUrl="~/Pagina/Varios/Tarjeta.aspx">
                     </dx:ASPxHyperLink> 
                     <dx:ASPxMenu ID="menu" runat="server" CssClass="float-end" OnInit="menu_Init"   />
                         <%--<Items>

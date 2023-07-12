@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Security.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,8 @@ namespace MiApp.web
 
         protected void Application_Start(object sender, EventArgs e)
         {
-
             DevExpress.XtraReports.Web.ASPxWebDocumentViewer.StaticInitialize();
+            AccessSettings.StaticResources.TrySetRules(DirectoryAccessRule.Allow(Server.MapPath("Imagen")));
         }
 
         protected void Session_Start(object sender, EventArgs e)

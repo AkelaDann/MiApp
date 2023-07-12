@@ -3,6 +3,7 @@ using DevExpress.Web;
 using MiApp.Bll;
 using MiApp.Fll;
 using MiApp.Mod;
+using MiApp.web.Reporte;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -130,6 +131,27 @@ namespace MiApp.web.Pagina.Demo
                 string ruta = Session["ruta"].ToString();
                 AsdItem.Document.History.Clear();
                 AsdItem.Open(ruta);
+            }
+        }
+
+        protected void AgvDocumentoGrilla_ToolbarItemClick(object source, DevExpress.Web.Data.ASPxGridViewToolbarItemClickEventArgs e)
+        {
+            if (e.Item.Name.Equals("Print"))
+            {
+                List<DocumentoMod> documentos = (List<DocumentoMod>)OdsDocumentosGrilla.Select();
+                foreach (DocumentoMod documento in documentos)
+                {
+                    documento.Items = ItemBll.Listar(documento.Codigo, out _);
+                    documento.Etapas = EtapaBll.Listar(documento.Codigo,out _);
+                }
+                XtraDocumentoGrilla xtraDocumentoGrilla = new XtraDocumentoGrilla
+                {
+                    DataSource = documentos
+                };
+                xtraDocumentoGrilla.Parameters["Usuario"].Value = "Daniel Gallardo";
+                xtraDocumentoGrilla.Parameters["TituloReporte"].Value = "Detalle Documentos";
+                AgvDocumentoGrilla.JSProperties["cpImprimir"] = true;
+                Session["reporte"] = xtraDocumentoGrilla;
             }
         }
     }
